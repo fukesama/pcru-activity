@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+title	C:\xampp\htdocs\pcru-activity\backend\views\user\create.php	/^$this->title = Yii::t('app', 'เพิ่มผู้ใช้');$/;"	variable	line:9
+title	C:\xampp\htdocs\pcru-activity\backend\views\user\index.php	/^$this->title = Yii::t('app', 'ผู้ใช้');$/;"	variable	line:16
+add	C:\xampp\htdocs\pcru-activity\backend\views\user\index.php	/^					<?php $add='เพิ่มผู้ใช้' ?>$/;"	variable	line:54
+title	C:\xampp\htdocs\pcru-activity\backend\views\user\signup.php	/^$this->title = 'Signup';$/;"	variable	line:12
+form	C:\xampp\htdocs\pcru-activity\backend\views\user\signup.php	/^                <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>$/;"	variable	line:23
+script	C:\xampp\htdocs\pcru-activity\backend\views\user\signup.php	/^$script=<<<JS$/;"	variable	line:58
+title	C:\xampp\htdocs\pcru-activity\backend\views\user\update.php	/^$this->title = Yii::t('app', 'Update User: ' . $model->id, [$/;"	variable	line:8
+title	C:\xampp\htdocs\pcru-activity\backend\views\user\view.php	/^$this->title = $model->id;$/;"	variable	line:9
+form	C:\xampp\htdocs\pcru-activity\backend\views\user\_form.php	/^    <?php $form = ActiveForm::begin(); ?>$/;"	variable	line:13
+form	C:\xampp\htdocs\pcru-activity\backend\views\user\_search.php	/^    <?php $form = ActiveForm::begin([$/;"	variable	line:13

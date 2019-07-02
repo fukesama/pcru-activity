@@ -1,0 +1,158 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+file	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^ * This is the template for generating a CRUD controller class file.$/;"	class	line:3
+controllerClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$controllerClass = StringHelper::basename($generator->controllerClass);$/;"	variable	line:13
+modelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$modelClass = StringHelper::basename($generator->modelClass);$/;"	variable	line:14
+searchModelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$searchModelClass = StringHelper::basename($generator->searchModelClass);$/;"	variable	line:15
+searchModelAlias	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    $searchModelAlias = $searchModelClass . 'Search';$/;"	variable	line:17
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$class = $generator->modelClass;$/;"	variable	line:21
+pks	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$pks = $class::primaryKey();$/;"	variable	line:22
+urlParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$urlParams = $generator->generateUrlParams();$/;"	variable	line:23
+actionParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$actionParams = $generator->generateActionParams();$/;"	variable	line:24
+actionParamComments	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^$actionParamComments = $generator->generateActionParamComments();$/;"	variable	line:25
+behaviors	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    public function behaviors()$/;"	function	line:51
+actionIndex	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    public function actionIndex()$/;"	function	line:67
+searchModel	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^        $searchModel = new <?= isset($searchModelAlias) ? $searchModelAlias : $searchModelClass ?>();$/;"	variable	line:70
+dataProvider	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);$/;"	variable	line:71
+dataProvider	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:78
+actionView	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    public function actionView(<?= $actionParams ?>)$/;"	function	line:94
+actionCreate	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    public function actionCreate()$/;"	function	line:106
+model	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^        $model = new <?= $modelClass ?>();$/;"	variable	line:108
+actionUpdate	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    public function actionUpdate(<?= $actionParams ?>)$/;"	function	line:126
+model	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^        $model = $this->findModel(<?= $actionParams ?>);$/;"	variable	line:128
+actionDelete	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    public function actionDelete(<?= $actionParams ?>)$/;"	function	line:146
+findModel	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    protected function findModel(<?= $actionParams ?>)$/;"	function	line:160
+condition	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    $condition = '$id';$/;"	variable	line:164
+condition	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    $condition = [];$/;"	variable	line:166
+condition	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\controller.php	/^    $condition = '[' . implode(', ', $condition) . ']';$/;"	variable	line:170
+of	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^ * This is the template for generating CRUD search class of the specified model.$/;"	class	line:3
+modelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^$modelClass = StringHelper::basename($generator->modelClass);$/;"	variable	line:12
+searchModelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^$searchModelClass = StringHelper::basename($generator->searchModelClass);$/;"	variable	line:13
+modelAlias	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^    $modelAlias = $modelClass . 'Model';$/;"	variable	line:15
+rules	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^$rules = $generator->generateSearchRules();$/;"	variable	line:17
+labels	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^$labels = $generator->generateSearchLabels();$/;"	variable	line:18
+searchAttributes	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^$searchAttributes = $generator->getSearchAttributes();$/;"	variable	line:19
+searchConditions	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^$searchConditions = $generator->generateSearchConditions();$/;"	variable	line:20
+rules	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^    public function rules()$/;"	function	line:40
+scenarios	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^    public function scenarios()$/;"	function	line:50
+search	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^    public function search($params)$/;"	function	line:63
+query	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^        $query = <?= isset($modelAlias) ? $modelAlias : $modelClass ?>::find();$/;"	variable	line:65
+dataProvider	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\search.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:69
+title	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\create.php	/^$this->title = <?= $generator->generateString('Create ' . Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>;$/;"	variable	line:18
+urlParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\index.php	/^$urlParams = $generator->generateUrlParams();$/;"	variable	line:9
+nameAttribute	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\index.php	/^$nameAttribute = $generator->getNameAttribute();$/;"	variable	line:10
+title	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\index.php	/^$this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;$/;"	variable	line:33
+add	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\index.php	/^                <?='<?'?>php $add='เพิ่ม'.Html::encode($this->title) ?>$/;"	variable	line:64
+count	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\index.php	/^                        $count = 0;$/;"	variable	line:81
+format	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\index.php	/^                                $format = $generator->generateColumnFormat($column);$/;"	variable	line:92
+urlParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\update.php	/^$urlParams = $generator->generateUrlParams();$/;"	variable	line:9
+title	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\update.php	/^$this->title = <?= strtr($generator->generateString('Update ' .$/;"	variable	line:19
+urlParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\view.php	/^$urlParams = $generator->generateUrlParams();$/;"	variable	line:9
+title	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\view.php	/^$this->title = $model-><?= $generator->getNameAttribute() ?>;$/;"	variable	line:20
+format	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\view.php	/^        $format = $generator->generateColumnFormat($column);$/;"	variable	line:49
+model	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\_form.php	/^$model = new $generator->modelClass();$/;"	variable	line:10
+safeAttributes	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\_form.php	/^$safeAttributes = $model->safeAttributes();$/;"	variable	line:11
+safeAttributes	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\_form.php	/^    $safeAttributes = $model->attributes();$/;"	variable	line:13
+count	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\default\views\_search.php	/^$count = 0;$/;"	variable	line:33
+Generator	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^class Generator extends \\yii\\gii\\Generator$/;"	class	line:33
+modelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $modelClass;$/;"	variable	line:35
+controllerClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $controllerClass;$/;"	variable	line:36
+viewPath	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $viewPath;$/;"	variable	line:37
+baseControllerClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $baseControllerClass = 'yii\\web\\Controller';$/;"	variable	line:38
+baseControllerClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $baseControllerClass = 'yii\\web\\Controller';$/;"	variable	line:38
+indexWidgetType	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $indexWidgetType = 'grid';$/;"	variable	line:39
+indexWidgetType	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $indexWidgetType = 'grid';$/;"	variable	line:39
+searchModelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $searchModelClass = '';$/;"	variable	line:40
+searchModelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $searchModelClass = '';$/;"	variable	line:40
+enablePjax	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $enablePjax = false;$/;"	variable	line:45
+enablePjax	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public $enablePjax = false;$/;"	variable	line:45
+getName	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getName()$/;"	function	line:51
+getDescription	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getDescription()$/;"	function	line:59
+rules	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function rules()$/;"	function	line:68
+name	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            [['controllerClass'], 'match', 'pattern' => '\/Controller$\/', 'message' => 'Controller class name must be suffixed with "Controller".'],$/;"	class	line:77
+name	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            [['controllerClass'], 'match', 'pattern' => '\/(^|\\\\\\\\)[A-Z][^\\\\\\\\]+Controller$\/', 'message' => 'Controller class name must start with an uppercase letter.'],$/;"	class	line:78
+attributeLabels	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function attributeLabels()$/;"	function	line:91
+hints	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function hints()$/;"	function	line:107
+associated	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            'modelClass' => 'This is the ActiveRecord class associated with the table that CRUD will be built upon.$/;"	class	line:110
+name	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                You should provide a fully qualified class name, e.g., <code>app\\models\\Post<\/code>.',$/;"	class	line:111
+to	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            'controllerClass' => 'This is the name of the controller class to be generated. You should$/;"	class	line:112
+name	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                and class name should be in CamelCase with an uppercase first letter. Make sure the class$/;"	class	line:114
+that	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            'baseControllerClass' => 'This is the class that the new CRUD controller class will extend from.$/;"	class	line:119
+name	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                You should provide a fully qualified class name, e.g., <code>yii\\web\\Controller<\/code>.',$/;"	class	line:120
+to	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            'searchModelClass' => 'This is the name of the search model class to be generated. You should provide a fully$/;"	class	line:123
+name	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                qualified namespaced class name, e.g., <code>app\\models\\PostSearch<\/code>.',$/;"	class	line:124
+requiredTemplates	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function requiredTemplates()$/;"	function	line:134
+stickyAttributes	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function stickyAttributes()$/;"	function	line:142
+is	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^     * Checks if model class is valid$/;"	class	line:148
+validateModelClass	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function validateModelClass()$/;"	function	line:150
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:153
+pk	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $pk = $class::primaryKey();$/;"	variable	line:154
+generate	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generate()$/;"	function	line:163
+controllerFile	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $controllerFile = Yii::getAlias('@' . str_replace('\\\\', '\/', ltrim($this->controllerClass, '\\\\')) . '.php');$/;"	variable	line:165
+files	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $files = [$/;"	variable	line:167
+searchModel	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $searchModel = Yii::getAlias('@' . str_replace('\\\\', '\/', ltrim($this->searchModelClass, '\\\\') . '.php'));$/;"	variable	line:172
+viewPath	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $viewPath = $this->getViewPath();$/;"	variable	line:176
+templatePath	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $templatePath = $this->getTemplatePath() . '\/views';$/;"	variable	line:177
+file	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            if (empty($this->searchModelClass) && $file === '_search.php') {$/;"	variable	line:179
+getControllerID	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getControllerID()$/;"	function	line:193
+pos	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $pos = strrpos($this->controllerClass, '\\\\');$/;"	variable	line:195
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = substr(substr($this->controllerClass, $pos + 1), 0, -10);$/;"	variable	line:196
+getViewPath	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getViewPath()$/;"	function	line:204
+getNameAttribute	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getNameAttribute()$/;"	function	line:216
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:224
+pk	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $pk = $class::primaryKey();$/;"	variable	line:225
+generateActiveField	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateActiveField($attribute)$/;"	function	line:235
+tableSchema	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $tableSchema = $this->getTableSchema();$/;"	variable	line:237
+column	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $column = $tableSchema->columns[$attribute];$/;"	variable	line:245
+input	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $input = 'passwordInput';$/;"	variable	line:255
+input	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $input = 'textInput';$/;"	variable	line:257
+dropDownOptions	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $dropDownOptions = [];$/;"	variable	line:261
+generateActiveSearchField	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateActiveSearchField($attribute)$/;"	function	line:281
+tableSchema	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $tableSchema = $this->getTableSchema();$/;"	variable	line:283
+column	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $column = $tableSchema->columns[$attribute];$/;"	variable	line:288
+generateColumnFormat	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateColumnFormat($column)$/;"	function	line:301
+generateSearchRules	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateSearchRules()$/;"	function	line:330
+types	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $types = [];$/;"	variable	line:335
+rules	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $rules = [];$/;"	variable	line:363
+type	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        foreach ($types as $type => $columns) {$/;"	variable	line:364
+getSearchAttributes	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getSearchAttributes()$/;"	function	line:374
+generateSearchLabels	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateSearchLabels()$/;"	function	line:383
+model	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $model = new $this->modelClass();$/;"	variable	line:386
+attributeLabels	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $attributeLabels = $model->attributeLabels();$/;"	variable	line:387
+labels	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $labels = [];$/;"	variable	line:388
+label	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                    $label = Inflector::camel2words($name);$/;"	variable	line:396
+label	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                        $label = substr($label, 0, -3) . ' ID';$/;"	variable	line:398
+generateSearchConditions	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateSearchConditions()$/;"	function	line:412
+columns	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $columns = [];$/;"	variable	line:414
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $class = $this->modelClass;$/;"	variable	line:416
+model	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $model = new $class();$/;"	variable	line:418
+likeConditions	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $likeConditions = [];$/;"	variable	line:428
+hashConditions	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $hashConditions = [];$/;"	variable	line:429
+column	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        foreach ($columns as $column => $type) {$/;"	variable	line:430
+likeKeyword	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^                    $likeKeyword = $this->getClassDbDriverName() === 'pgsql' ? 'ilike' : 'like';$/;"	variable	line:448
+conditions	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $conditions = [];$/;"	variable	line:454
+generateUrlParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateUrlParams()$/;"	function	line:471
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:474
+pks	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $pks = $class::primaryKey();$/;"	variable	line:475
+params	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $params = [];$/;"	variable	line:484
+generateActionParams	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateActionParams()$/;"	function	line:500
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:503
+pks	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $pks = $class::primaryKey();$/;"	variable	line:504
+generateActionParamComments	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function generateActionParamComments()$/;"	function	line:516
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:519
+pks	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $pks = $class::primaryKey();$/;"	variable	line:520
+params	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^            $params = [];$/;"	variable	line:522
+params	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $params = [];$/;"	variable	line:533
+or	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^     * Returns table schema for current model class or false if it is not an active record$/;"	class	line:542
+getTableSchema	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getTableSchema()$/;"	function	line:545
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:548
+getColumnNames	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    public function getColumnNames()$/;"	function	line:559
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:562
+model	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $model = new $class();$/;"	variable	line:568
+getClassDbDriverName	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^    protected function getClassDbDriverName()$/;"	function	line:578
+class	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $class = $this->modelClass;$/;"	variable	line:581
+db	C:\xampp\htdocs\pcru-activity\material_dashboard\generators\crud\Generator.php	/^        $db = $class::getDb();$/;"	variable	line:582

@@ -1,0 +1,38 @@
+{
+    "name": "karatae99/yii2-date-picker-thai-widget",
+    "description": "Bootstrap DatePicker Thai Buddhist-Era (B.E.) widget for Yii2.",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "yii 2",
+        "extension",
+        "widget",
+        "datepicker",
+		"calendar",
+		"buddhist",
+		"thai"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Akaranan Naree",
+            "email": "karatae99@hotmail.com",
+            "role": "Beginner Developer"
+        }
+    ],    
+    "require": {
+        "yiisoft/yii2": ">=2.0.9",
+        "yiisoft/yii2-bootstrap": "*",
+        "bower-asset/bootstrap-datepicker": "1.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "karatae99\\datepicker\\": "src"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

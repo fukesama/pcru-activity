@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+title	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^$this->title = 'Signup';$/;"	variable	line:26
+form	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^    <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>$/;"	variable	line:31
+level_user	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^        $level_user=User::findOne($model->id)->level_user;$/;"	variable	line:34
+muc	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^            $muc=UserCollegian::find()->where(['user_id'=>$model->id])->one();$/;"	variable	line:40
+data	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^            <?php $data=ArrayHelper::map(\\frontend\\models\\Prefix::find()->all(), 'pre_id', 'pre_name'); ?>$/;"	variable	line:73
+uc	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^            <?php $uc=ArrayHelper::map(frontend\\models\\Branch::find()->where(['faculty_id'=>$modeluc->faculty_id])$/;"	variable	line:150
+js	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^$js=<<<JS$/;"	variable	line:225
+isUndefined	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^function isUndefined(x) {$/;"	function	line:226
+eUser	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^function eUser(val){$/;"	function	line:230
+changeBranch	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^function changeBranch(val){$/;"	function	line:255
+js	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^$js=<<<JS$/;"	variable	line:267
+fac	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^$fac=$modeluc->faculty_id!==null;$/;"	variable	line:287
+js	C:\xampp\htdocs\pcru-activity\frontend\views\user\signup.php	/^$js=<<<JS$/;"	variable	line:288

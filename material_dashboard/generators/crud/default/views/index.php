@@ -1,0 +1,124 @@
+<?php
+
+use yii\helpers\Inflector;
+use yii\helpers\StringHelper;
+
+/* @var $this yii\web\View */
+/* @var $generator yii\gii\generators\crud\Generator */
+
+$urlParams = $generator->generateUrlParams();
+$nameAttribute = $generator->getNameAttribute();
+
+echo "<?php\n";
+?>
+
+use yii\helpers\Html;
+use yii\widgets\Pjax;
+use yii\helpers\Url;
+use \yii\web\Request;
+
+use yii\web\View;
+use yii\helpers\Json;
+
+use kartik\widgets\Select2;
+use yii\helpers\ArrayHelper;
+
+use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
+<?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>
+
+/* @var $this yii\web\View */
+<?= !empty($generator->searchModelClass) ? "/* @var \$searchModel " . ltrim($generator->searchModelClass, '\\') . " */\n" : '' ?>
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<style>
+.form-group {
+    padding-bottom: none;
+    margin: 0 0 0 0;
+}
+.btm{
+    margin:0px;
+}
+.btn.btn-xs{
+        padding: 4px 6px
+}
+</style>
+<div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="purple">
+                    <i class="material-icons"  style="display:block;float:left;">list</i>
+                    <h4 style="display:block;float:left;padding-top:4px;font-weight:bold;">
+                        <?='<'.'?= Html::encode($this->title) ?>' ?>
+                    </h4>
+                </div>
+                <div class="card-content">
+                    <h4 class="title" style="font-weight:bold;
+                    display:inline-block;
+                    float:left;
+                    text-align:left;
+                    width: 200px;
+                    ">
+
+                </h4>
+                <?='<?'?>php $add='เพิ่ม'.Html::encode($this->title) ?>
+                <a href="<?="<"?>?=Url::to(['create'])?>" id="add" data-toggle="tooltip" data-placement="top" title="<?='<'?>?=$add?>" style="">
+                    <div class="btn btn-primary" style="">
+                        <i class="material-icons">add_box</i><?="<"?>?=$add?>
+                    </div>
+                </a>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <div class="table-responsive" style='margin-bottom:10px'>
+                    <?php if ($generator->indexWidgetType === 'grid'): ?>
+                        <?= "<?= " ?>GridView::widget([
+                        'dataProvider' => $dataProvider,
+                        <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n        'columns' => [\n" : "'columns' => [\n"; ?>
+                        ['class' => 'yii\grid\SerialColumn'],
+
+                        <?php
+                        $count = 0;
+                        if (($tableSchema = $generator->getTableSchema()) === false) {
+                            foreach ($generator->getColumnNames() as $name) {
+                                if (++$count < 6) {
+                                    echo "            '" . $name . "',\n";
+                                } else {
+                                    echo "            //'" . $name . "',\n";
+                                }
+                            }
+                        } else {
+                            foreach ($tableSchema->columns as $column) {
+                                $format = $generator->generateColumnFormat($column);
+                                if (++$count < 6) {
+                                    echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+                                } else {
+                                    echo "            //'" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+                                }
+                            }
+                        }
+                        ?>
+
+                         Yii::$app->Func->AcColumn(),
+                        
+                        ],
+                        ]); ?>
+                    <?php else: ?>
+                        <?= "<?= " ?>ListView::widget([
+                        'dataProvider' => $dataProvider,
+                        'itemOptions' => ['class' => 'item'],
+                        'itemView' => function ($model, $key, $index, $widget) {
+                            return Html::a(Html::encode($model-><?= $nameAttribute ?>), ['view', <?= $urlParams ?>]);
+                        },
+                        ]) ?>
+                    <?php endif; ?>
+                    <?= $generator->enablePjax ? "    <?php Pjax::end(); ?>\n" : '' ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

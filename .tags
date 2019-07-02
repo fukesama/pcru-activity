@@ -1,0 +1,173 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AcColumn	C:\xampp\htdocs\pcru-activity\common\components\AcColumn.php	/^class AcColumn extends Component {$/;"	class	line:36
+AcColumn	C:\xampp\htdocs\pcru-activity\common\components\AcColumn.php	/^	public function AcColumn($site=null){$/;"	function	line:37
+button	C:\xampp\htdocs\pcru-activity\common\components\AcColumn.php	/^			$button=$this->UserButton();$/;"	variable	line:39
+button	C:\xampp\htdocs\pcru-activity\common\components\AcColumn.php	/^			$button=$this->DefaultButton();$/;"	variable	line:42
+UserButton	C:\xampp\htdocs\pcru-activity\common\components\AcColumn.php	/^	protected function UserButton(){$/;"	function	line:51
+DefaultButton	C:\xampp\htdocs\pcru-activity\common\components\AcColumn.php	/^	protected function DefaultButton(){$/;"	function	line:96
+Func	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^class Func extends Component {$/;"	class	line:38
+accesbackend	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function accesbackend(){$/;"	function	line:39
+SetTime	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function SetTime($time){$/;"	function	line:77
+time	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$time=split(':',$time);$/;"	variable	line:78
+Qrcode	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function Qrcode($data){$/;"	function	line:81
+qrCode	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$qrCode = (new QrCode($data))$/;"	variable	line:84
+level_user	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	protected function level_user(){$/;"	function	line:99
+AcColumn	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function AcColumn($site=null){$/;"	function	line:103
+Level	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function Level($level){$/;"	function	line:107
+Input	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function Input($type='text'){$/;"	function	line:111
+ArrayLevel	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function ArrayLevel($choice=null){$/;"	function	line:125
+array	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$array=[$/;"	variable	line:126
+colorCon	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function colorCon($hex, $steps) {$/;"	function	line:137
+steps	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$steps = max(-255, min(255, $steps));$/;"	variable	line:138
+hex	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$hex = str_replace('#', '', $hex);$/;"	variable	line:139
+hex	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$hex = str_repeat(substr($hex,0,1), 2).str_repeat(substr($hex,1,1), 2).str_repeat(substr($hex,2,1), 2);$/;"	variable	line:141
+color_parts	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$color_parts = str_split($hex, 2);$/;"	variable	line:143
+return	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$return = '#';$/;"	variable	line:144
+color	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$color   = hexdec($color);$/;"	variable	line:146
+color	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$color   = max(0,min(255,$color + $steps));$/;"	variable	line:147
+MapDataDropDown	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function MapDataDropDown($datas,$fieldId,$fieldName,$no,$type=null){$/;"	function	line:155
+obj	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$obj = [];$/;"	variable	line:156
+key	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		foreach ($datas as $key => $value)$/;"	variable	line:160
+GenYear	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function GenYear(){$/;"	function	line:171
+array	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$array=[];$/;"	variable	line:173
+year	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$year=date('Y')+543+1;$/;"	variable	line:174
+n	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$n=$year-2557+1;$/;"	variable	line:175
+DateThai	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function DateThai()$/;"	function	line:184
+strYear	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$strYear = date("Y");$/;"	variable	line:186
+strMonth	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$strMonth= date("n");$/;"	variable	line:187
+strDay	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$strDay= date("j");$/;"	variable	line:188
+strMonthCut	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$strMonthCut = Array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");$/;"	variable	line:189
+strMonthThai	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$strMonthThai=$strMonthCut[$strMonth];$/;"	variable	line:190
+number_format	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function number_format($number,$decimal = '.')$/;"	function	line:194
+text	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$text='';$/;"	variable	line:196
+broken_number	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^		$broken_number = explode($decimal,$number);$/;"	variable	line:197
+activelink	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^	public function activelink($url){$/;"	function	line:201
+route	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$route=$url;$/;"	variable	line:203
+route	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^				$route = Yii::$app->controller->module->getUniqueId().'\/'.$route;$/;"	variable	line:205
+route	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$route=ltrim($route,'\/');$/;"	variable	line:207
+url	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$url=ltrim(Yii::$app->request->url,'\/');$/;"	variable	line:208
+arrayRoute	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$arrayRoute = explode('\/',$route);$/;"	variable	line:209
+arrayThisRoute	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$arrayThisRoute = explode('\/',$url);$/;"	variable	line:210
+count	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$count=count($arrayThisRoute)-1;$/;"	variable	line:211
+text	C:\xampp\htdocs\pcru-activity\common\components\Func.php	/^			$text=$arrayThisRoute[$count];$/;"	variable	line:212
+for	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^ * Mobile_Detect is a lightweight PHP class for detecting mobile devices (including tablets).$/;"	class	line:6
+Mobiledetect	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^class Mobiledetect extends Component$/;"	class	line:52
+cache	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $cache = array();$/;"	variable	line:100
+cache	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $cache = array();$/;"	variable	line:100
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $userAgent = null;$/;"	variable	line:105
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $userAgent = null;$/;"	variable	line:105
+httpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $httpHeaders = array();$/;"	variable	line:110
+httpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $httpHeaders = array();$/;"	variable	line:110
+cloudfrontHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $cloudfrontHeaders = array();$/;"	variable	line:115
+cloudfrontHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $cloudfrontHeaders = array();$/;"	variable	line:115
+matchingRegex	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $matchingRegex = null;$/;"	variable	line:121
+matchingRegex	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $matchingRegex = null;$/;"	variable	line:121
+matchesArray	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $matchesArray = null;$/;"	variable	line:128
+matchesArray	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $matchesArray = null;$/;"	variable	line:128
+detectionType	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $detectionType = self::DETECTION_TYPE_MOBILE;$/;"	variable	line:136
+detectionType	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected $detectionType = self::DETECTION_TYPE_MOBILE;$/;"	variable	line:136
+mobileHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $mobileHeaders = array($/;"	variable	line:143
+mobileHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $mobileHeaders = array($/;"	variable	line:143
+phoneDevices	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $phoneDevices = array($/;"	variable	line:176
+phoneDevices	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $phoneDevices = array($/;"	variable	line:176
+tabletDevices	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $tabletDevices = array($/;"	variable	line:224
+tabletDevices	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $tabletDevices = array($/;"	variable	line:224
+operatingSystems	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $operatingSystems = array($/;"	variable	line:491
+operatingSystems	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $operatingSystems = array($/;"	variable	line:491
+browsers	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $browsers = array($/;"	variable	line:526
+browsers	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $browsers = array($/;"	variable	line:526
+utilities	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $utilities = array($/;"	variable	line:569
+utilities	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $utilities = array($/;"	variable	line:569
+uaHttpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $uaHttpHeaders = array($/;"	variable	line:589
+uaHttpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $uaHttpHeaders = array($/;"	variable	line:589
+properties	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $properties = array($/;"	variable	line:608
+properties	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected static $properties = array($/;"	variable	line:608
+__construct	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function __construct($/;"	function	line:680
+headers	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        array $headers = null,$/;"	variable	line:681
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $userAgent = null$/;"	variable	line:682
+getScriptVersion	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getScriptVersion()$/;"	function	line:695
+setHttpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function setHttpHeaders($httpHeaders = null)$/;"	function	line:705
+httpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $httpHeaders = $_SERVER;$/;"	variable	line:709
+httpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $this->httpHeaders = array();$/;"	variable	line:712
+key	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        foreach ($httpHeaders as $key => $value) {$/;"	variable	line:715
+getHttpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getHttpHeaders()$/;"	function	line:728
+getHttpHeader	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getHttpHeader($header)$/;"	function	line:742
+header	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $header = str_replace('-', '_', $header);$/;"	variable	line:746
+header	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $header = strtoupper($header);$/;"	variable	line:747
+altHeader	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $altHeader = 'HTTP_' . $header;$/;"	variable	line:750
+getMobileHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getMobileHeaders()$/;"	function	line:759
+getUaHttpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getUaHttpHeaders()$/;"	function	line:769
+setCfHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function setCfHeaders($cfHeaders = null) {$/;"	function	line:781
+cfHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $cfHeaders = $_SERVER;$/;"	variable	line:784
+cloudfrontHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $this->cloudfrontHeaders = array();$/;"	variable	line:787
+response	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $response = false;$/;"	variable	line:790
+key	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        foreach ($cfHeaders as $key => $value) {$/;"	variable	line:791
+response	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^                $response = true;$/;"	variable	line:794
+getCfHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getCfHeaders()$/;"	function	line:804
+prepareUserAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    private function prepareUserAgent($userAgent) {$/;"	function	line:812
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $userAgent = trim($userAgent);$/;"	variable	line:813
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $userAgent = substr($userAgent, 0, 500);$/;"	variable	line:814
+setUserAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function setUserAgent($userAgent = null)$/;"	function	line:824
+cache	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $this->cache = array();$/;"	variable	line:827
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            return $this->userAgent = $this->prepareUserAgent($userAgent);$/;"	variable	line:829
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $this->userAgent = null;$/;"	variable	line:831
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^                return $this->userAgent = $this->prepareUserAgent($this->userAgent);$/;"	variable	line:838
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            return $this->userAgent = 'Amazon CloudFront';$/;"	variable	line:842
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        return $this->userAgent = null;$/;"	variable	line:844
+getUserAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getUserAgent()$/;"	function	line:851
+setDetectionType	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function setDetectionType($type = null)$/;"	function	line:864
+type	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $type = self::DETECTION_TYPE_MOBILE;$/;"	variable	line:867
+detectionType	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $this->detectionType = $type;$/;"	variable	line:872
+getMatchingRegex	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getMatchingRegex()$/;"	function	line:874
+getMatchesArray	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getMatchesArray()$/;"	function	line:878
+getPhoneDevices	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getPhoneDevices()$/;"	function	line:887
+getTabletDevices	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getTabletDevices()$/;"	function	line:896
+getUserAgents	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getUserAgents()$/;"	function	line:905
+getBrowsers	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getBrowsers()$/;"	function	line:914
+getUtilities	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getUtilities()$/;"	function	line:923
+getMobileDetectionRules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getMobileDetectionRules()$/;"	function	line:934
+rules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        static $rules;$/;"	variable	line:936
+rules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $rules = array_merge($/;"	variable	line:938
+getMobileDetectionRulesExtended	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getMobileDetectionRulesExtended()$/;"	function	line:957
+rules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        static $rules;$/;"	variable	line:959
+rules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $rules = array_merge($/;"	variable	line:962
+getRules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function getRules()$/;"	function	line:979
+getOperatingSystems	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getOperatingSystems()$/;"	function	line:992
+checkHttpHeadersForMobile	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function checkHttpHeadersForMobile()$/;"	function	line:1003
+mobileHeader	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        foreach ($this->getMobileHeaders() as $mobileHeader => $matchType) {$/;"	variable	line:1005
+__call	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function __call($name, $arguments)$/;"	function	line:1030
+key	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $key = substr($name, 2);$/;"	variable	line:1037
+matchDetectionRulesAgainstUA	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected function matchDetectionRulesAgainstUA($userAgent = null)$/;"	function	line:1046
+matchUAAgainstKey	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    protected function matchUAAgainstKey($key)$/;"	function	line:1068
+key	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $key = strtolower($key);$/;"	variable	line:1071
+_rules	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $_rules = array_change_key_case($this->getRules());$/;"	variable	line:1074
+isMobile	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function isMobile($userAgent = null, $httpHeaders = null)$/;"	function	line:1091
+httpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function isMobile($userAgent = null, $httpHeaders = null)$/;"	variable	line:1091
+cfHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $cfHeaders = $this->getCfHeaders();$/;"	variable	line:1101
+isTablet	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function isTablet($userAgent = null, $httpHeaders = null)$/;"	function	line:1121
+httpHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function isTablet($userAgent = null, $httpHeaders = null)$/;"	variable	line:1121
+cfHeaders	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $cfHeaders = $this->getCfHeaders();$/;"	variable	line:1125
+is	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function is($key, $userAgent = null, $httpHeaders = null)$/;"	function	line:1148
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function is($key, $userAgent = null, $httpHeaders = null)$/;"	variable	line:1148
+match	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function match($regex, $userAgent = null)$/;"	function	line:1175
+userAgent	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function match($regex, $userAgent = null)$/;"	variable	line:1175
+match	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $match = (bool) preg_match(sprintf('#%s#is', $regex), (false === empty($userAgent) ? $userAgent : $this->userAgent), $matches);$/;"	variable	line:1177
+matchingRegex	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $this->matchingRegex = $regex;$/;"	variable	line:1180
+matchesArray	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $this->matchesArray = $matches;$/;"	variable	line:1181
+getProperties	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public static function getProperties()$/;"	function	line:1190
+prepareVersionNo	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function prepareVersionNo($ver)$/;"	function	line:1203
+ver	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $ver = str_replace(array('_', ' ', '\/'), '.', $ver);$/;"	variable	line:1205
+arrVer	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $arrVer = explode('.', $ver, 2);$/;"	variable	line:1206
+version	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function version($propertyName, $type = self::VERSION_TYPE_STRING)$/;"	function	line:1225
+type	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function version($propertyName, $type = self::VERSION_TYPE_STRING)$/;"	variable	line:1225
+type	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^            $type = self::VERSION_TYPE_STRING;$/;"	variable	line:1232
+properties	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $properties = self::getProperties();$/;"	variable	line:1234
+propertyPattern	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^                $propertyPattern = str_replace('[VER]', self::VER, $propertyMatchString);$/;"	variable	line:1241
+version	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^                    $version = ($type == self::VERSION_TYPE_FLOAT ? $this->prepareVersionNo($match[1]) : $match[1]);$/;"	variable	line:1245
+mobileGrade	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^    public function mobileGrade()$/;"	function	line:1257
+isMobile	C:\xampp\htdocs\pcru-activity\common\components\Mobiledetect.php	/^        $isMobile = $this->isMobile();$/;"	variable	line:1259

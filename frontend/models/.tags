@@ -1,0 +1,195 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+for	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^ * This is the model class for table "activity".$/;"	class	line:8
+Activity	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^class Activity extends \\yii\\db\\ActiveRecord$/;"	class	line:23
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public static function tableName()$/;"	function	line:28
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public function rules()$/;"	function	line:36
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public function attributeLabels()$/;"	function	line:55
+getCate	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public function getCate()$/;"	function	line:71
+getType	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public function getType()$/;"	function	line:79
+getSide	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public function getSide()$/;"	function	line:87
+getActivityOfyears	C:\xampp\htdocs\pcru-activity\frontend\models\Activity.php	/^    public function getActivityOfyears()$/;"	function	line:95
+for	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCate.php	/^ * This is the model class for table "activity_cate".$/;"	class	line:8
+ActivityCate	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCate.php	/^class ActivityCate extends \\yii\\db\\ActiveRecord$/;"	class	line:15
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCate.php	/^    public static function tableName()$/;"	function	line:20
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCate.php	/^    public function rules()$/;"	function	line:28
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCate.php	/^    public function attributeLabels()$/;"	function	line:41
+getActivities	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCate.php	/^    public function getActivities()$/;"	function	line:52
+ActivityCateSearch	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCateSearch.php	/^class ActivityCateSearch extends ActivityCate$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCateSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCateSearch.php	/^    public function scenarios()$/;"	function	line:27
+search	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCateSearch.php	/^    public function search($params)$/;"	function	line:40
+query	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCateSearch.php	/^        $query = ActivityCate::find();$/;"	variable	line:42
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityCateSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:46
+ActivitySearch	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySearch.php	/^class ActivitySearch extends Activity$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySearch.php	/^    public function scenarios()$/;"	function	line:28
+search	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySearch.php	/^    public function search($params)$/;"	function	line:41
+query	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySearch.php	/^        $query = Activity::find();$/;"	variable	line:43
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:47
+for	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySide.php	/^ * This is the model class for table "activity_side".$/;"	class	line:8
+ActivitySide	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySide.php	/^class ActivitySide extends \\yii\\db\\ActiveRecord$/;"	class	line:15
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySide.php	/^    public static function tableName()$/;"	function	line:20
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySide.php	/^    public function rules()$/;"	function	line:28
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySide.php	/^    public function attributeLabels()$/;"	function	line:41
+getActivities	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySide.php	/^    public function getActivities()$/;"	function	line:52
+ActivitySideSearch	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySideSearch.php	/^class ActivitySideSearch extends ActivitySide$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySideSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySideSearch.php	/^    public function scenarios()$/;"	function	line:27
+search	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySideSearch.php	/^    public function search($params)$/;"	function	line:40
+query	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySideSearch.php	/^        $query = ActivitySide::find();$/;"	variable	line:42
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\ActivitySideSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:46
+for	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityType.php	/^ * This is the model class for table "activity_type".$/;"	class	line:8
+ActivityType	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityType.php	/^class ActivityType extends \\yii\\db\\ActiveRecord$/;"	class	line:15
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityType.php	/^    public static function tableName()$/;"	function	line:20
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityType.php	/^    public function rules()$/;"	function	line:28
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityType.php	/^    public function attributeLabels()$/;"	function	line:41
+getActivities	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityType.php	/^    public function getActivities()$/;"	function	line:52
+ActivityTypeSearch	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityTypeSearch.php	/^class ActivityTypeSearch extends ActivityType$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityTypeSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityTypeSearch.php	/^    public function scenarios()$/;"	function	line:27
+search	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityTypeSearch.php	/^    public function search($params)$/;"	function	line:40
+query	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityTypeSearch.php	/^        $query = ActivityType::find();$/;"	variable	line:42
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\ActivityTypeSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:46
+BrachSearch	C:\xampp\htdocs\pcru-activity\frontend\models\BrachSearch.php	/^class BrachSearch extends Branch$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\BrachSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\BrachSearch.php	/^    public function scenarios()$/;"	function	line:28
+search	C:\xampp\htdocs\pcru-activity\frontend\models\BrachSearch.php	/^    public function search($params)$/;"	function	line:41
+query	C:\xampp\htdocs\pcru-activity\frontend\models\BrachSearch.php	/^        $query = Branch::find();$/;"	variable	line:43
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\BrachSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:47
+for	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^ * This is the model class for table "branch".$/;"	class	line:8
+Branch	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^class Branch extends \\yii\\db\\ActiveRecord$/;"	class	line:18
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^    public static function tableName()$/;"	function	line:23
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^    public function rules()$/;"	function	line:31
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^    public function attributeLabels()$/;"	function	line:48
+getFaculty	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^    public function getFaculty()$/;"	function	line:61
+getEdub	C:\xampp\htdocs\pcru-activity\frontend\models\Branch.php	/^    public function getEdub()$/;"	function	line:69
+BranchSearch	C:\xampp\htdocs\pcru-activity\frontend\models\BranchSearch.php	/^class BranchSearch extends Branch$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\BranchSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\BranchSearch.php	/^    public function scenarios()$/;"	function	line:28
+search	C:\xampp\htdocs\pcru-activity\frontend\models\BranchSearch.php	/^    public function search($params)$/;"	function	line:41
+query	C:\xampp\htdocs\pcru-activity\frontend\models\BranchSearch.php	/^        $query = Branch::find();$/;"	variable	line:43
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\BranchSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:47
+ContactForm	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^class ContactForm extends Model$/;"	class	line:11
+name	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public $name;$/;"	variable	line:13
+email	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public $email;$/;"	variable	line:14
+subject	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public $subject;$/;"	variable	line:15
+body	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public $body;$/;"	variable	line:16
+verifyCode	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public $verifyCode;$/;"	variable	line:17
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public function rules()$/;"	function	line:23
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public function attributeLabels()$/;"	function	line:38
+sendEmail	C:\xampp\htdocs\pcru-activity\frontend\models\ContactForm.php	/^    public function sendEmail($email)$/;"	function	line:51
+for	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackground.php	/^ * This is the model class for table "edu_background".$/;"	class	line:8
+EduBackground	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackground.php	/^class EduBackground extends \\yii\\db\\ActiveRecord$/;"	class	line:16
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackground.php	/^    public static function tableName()$/;"	function	line:21
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackground.php	/^    public function rules()$/;"	function	line:29
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackground.php	/^    public function attributeLabels()$/;"	function	line:43
+getBranches	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackground.php	/^    public function getBranches()$/;"	function	line:55
+EduBackgroundSearch	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackgroundSearch.php	/^class EduBackgroundSearch extends EduBackground$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackgroundSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackgroundSearch.php	/^    public function scenarios()$/;"	function	line:27
+search	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackgroundSearch.php	/^    public function search($params)$/;"	function	line:40
+query	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackgroundSearch.php	/^        $query = EduBackground::find();$/;"	variable	line:42
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\EduBackgroundSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:46
+for	C:\xampp\htdocs\pcru-activity\frontend\models\Faculty.php	/^ * This is the model class for table "faculty".$/;"	class	line:8
+Faculty	C:\xampp\htdocs\pcru-activity\frontend\models\Faculty.php	/^class Faculty extends \\yii\\db\\ActiveRecord$/;"	class	line:15
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\Faculty.php	/^    public static function tableName()$/;"	function	line:20
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\Faculty.php	/^    public function rules()$/;"	function	line:28
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\Faculty.php	/^    public function attributeLabels()$/;"	function	line:41
+getBranches	C:\xampp\htdocs\pcru-activity\frontend\models\Faculty.php	/^    public function getBranches()$/;"	function	line:52
+FacultySearch	C:\xampp\htdocs\pcru-activity\frontend\models\FacultySearch.php	/^class FacultySearch extends Faculty$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\FacultySearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\FacultySearch.php	/^    public function scenarios()$/;"	function	line:27
+search	C:\xampp\htdocs\pcru-activity\frontend\models\FacultySearch.php	/^    public function search($params)$/;"	function	line:40
+query	C:\xampp\htdocs\pcru-activity\frontend\models\FacultySearch.php	/^        $query = Faculty::find();$/;"	variable	line:42
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\FacultySearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:46
+PasswordResetRequestForm	C:\xampp\htdocs\pcru-activity\frontend\models\PasswordResetRequestForm.php	/^class PasswordResetRequestForm extends Model$/;"	class	line:11
+email	C:\xampp\htdocs\pcru-activity\frontend\models\PasswordResetRequestForm.php	/^    public $email;$/;"	variable	line:13
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\PasswordResetRequestForm.php	/^    public function rules()$/;"	function	line:19
+sendEmail	C:\xampp\htdocs\pcru-activity\frontend\models\PasswordResetRequestForm.php	/^    public function sendEmail()$/;"	function	line:38
+user	C:\xampp\htdocs\pcru-activity\frontend\models\PasswordResetRequestForm.php	/^        $user = User::findOne([$/;"	variable	line:41
+for	C:\xampp\htdocs\pcru-activity\frontend\models\Prefix.php	/^ * This is the model class for table "prefix".$/;"	class	line:8
+Prefix	C:\xampp\htdocs\pcru-activity\frontend\models\Prefix.php	/^class Prefix extends \\yii\\db\\ActiveRecord$/;"	class	line:13
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\Prefix.php	/^    public static function tableName()$/;"	function	line:18
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\Prefix.php	/^    public function rules()$/;"	function	line:26
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\Prefix.php	/^    public function attributeLabels()$/;"	function	line:39
+PrefixSearch	C:\xampp\htdocs\pcru-activity\frontend\models\PrefixSearch.php	/^class PrefixSearch extends Prefix$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\PrefixSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\PrefixSearch.php	/^    public function scenarios()$/;"	function	line:27
+search	C:\xampp\htdocs\pcru-activity\frontend\models\PrefixSearch.php	/^    public function search($params)$/;"	function	line:40
+query	C:\xampp\htdocs\pcru-activity\frontend\models\PrefixSearch.php	/^        $query = Prefix::find();$/;"	variable	line:42
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\PrefixSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:46
+ResetPasswordForm	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^class ResetPasswordForm extends Model$/;"	class	line:11
+password	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^    public $password;$/;"	variable	line:13
+_user	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^    private $_user;$/;"	variable	line:18
+__construct	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^    public function __construct($token, $config = [])$/;"	function	line:28
+config	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^    public function __construct($token, $config = [])$/;"	variable	line:28
+_user	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^        $this->_user = User::findByPasswordResetToken($token);$/;"	variable	line:33
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^    public function rules()$/;"	function	line:43
+resetPassword	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^    public function resetPassword()$/;"	function	line:56
+user	C:\xampp\htdocs\pcru-activity\frontend\models\ResetPasswordForm.php	/^        $user = $this->_user;$/;"	variable	line:58
+SignupForm	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^class SignupForm extends Model$/;"	class	line:11
+username	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^    public $username;$/;"	variable	line:13
+email	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^    public $email;$/;"	variable	line:14
+password	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^    public $password;$/;"	variable	line:15
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^    public function rules()$/;"	function	line:21
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^    public function attributeLabels()$/;"	function	line:46
+signup	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^    public function signup()$/;"	function	line:67
+user	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^        $user = new User();$/;"	variable	line:73
+password	C:\xampp\htdocs\pcru-activity\frontend\models\SignupForm.php	/^            $this->password='12345678';$/;"	variable	line:76
+for	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^ * This is the model class for table "user".$/;"	class	line:8
+User	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^class User extends \\yii\\db\\ActiveRecord$/;"	class	line:25
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function tableName()$/;"	function	line:30
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function rules()$/;"	function	line:38
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function attributeLabels()$/;"	function	line:55
+getUserCollegian	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function getUserCollegian()$/;"	function	line:75
+getUserOfficer	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function getUserOfficer()$/;"	function	line:83
+findIdentity	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function findIdentity($id)$/;"	function	line:87
+findIdentityByAccessToken	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function findIdentityByAccessToken($token, $type = null)$/;"	function	line:95
+type	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function findIdentityByAccessToken($token, $type = null)$/;"	variable	line:95
+findByUsername	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function findByUsername($username)$/;"	function	line:106
+findByPasswordResetToken	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function findByPasswordResetToken($token)$/;"	function	line:117
+isPasswordResetTokenValid	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public static function isPasswordResetTokenValid($token)$/;"	function	line:135
+timestamp	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^        $timestamp = (int) substr($token, strrpos($token, '_') + 1);$/;"	variable	line:141
+expire	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^        $expire = Yii::$app->params['user.passwordResetTokenExpire'];$/;"	variable	line:142
+getId	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function getId()$/;"	function	line:149
+getAuthKey	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function getAuthKey()$/;"	function	line:157
+validateAuthKey	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function validateAuthKey($authKey)$/;"	function	line:165
+validatePassword	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function validatePassword($password)$/;"	function	line:176
+setPassword	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function setPassword($password)$/;"	function	line:186
+password_hash	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^        $this->password_hash = Yii::$app->security->generatePasswordHash($password);$/;"	variable	line:188
+generateAuthKey	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function generateAuthKey()$/;"	function	line:194
+auth_key	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^        $this->auth_key = Yii::$app->security->generateRandomString();$/;"	variable	line:196
+generatePasswordResetToken	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function generatePasswordResetToken()$/;"	function	line:202
+password_reset_token	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();$/;"	variable	line:204
+removePasswordResetToken	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^    public function removePasswordResetToken()$/;"	function	line:210
+password_reset_token	C:\xampp\htdocs\pcru-activity\frontend\models\User.php	/^        $this->password_reset_token = null;$/;"	variable	line:212
+for	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegian.php	/^ * This is the model class for table "user_collegian".$/;"	class	line:8
+UserCollegian	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegian.php	/^class UserCollegian extends \\yii\\db\\ActiveRecord$/;"	class	line:20
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegian.php	/^    public static function tableName()$/;"	function	line:25
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegian.php	/^    public function rules()$/;"	function	line:33
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegian.php	/^    public function attributeLabels()$/;"	function	line:48
+getUser	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegian.php	/^    public function getUser()$/;"	function	line:64
+UserCollegianSearch	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegianSearch.php	/^class UserCollegianSearch extends UserCollegian$/;"	class	line:12
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegianSearch.php	/^    public function rules()$/;"	function	line:17
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegianSearch.php	/^    public function scenarios()$/;"	function	line:28
+search	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegianSearch.php	/^    public function search($params)$/;"	function	line:41
+query	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegianSearch.php	/^        $query = UserCollegian::find();$/;"	variable	line:43
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\UserCollegianSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:47
+for	C:\xampp\htdocs\pcru-activity\frontend\models\UserOfficer.php	/^ * This is the model class for table "user_officer".$/;"	class	line:8
+UserOfficer	C:\xampp\htdocs\pcru-activity\frontend\models\UserOfficer.php	/^class UserOfficer extends \\yii\\db\\ActiveRecord$/;"	class	line:17
+tableName	C:\xampp\htdocs\pcru-activity\frontend\models\UserOfficer.php	/^    public static function tableName()$/;"	function	line:22
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\UserOfficer.php	/^    public function rules()$/;"	function	line:30
+attributeLabels	C:\xampp\htdocs\pcru-activity\frontend\models\UserOfficer.php	/^    public function attributeLabels()$/;"	function	line:45
+getUser	C:\xampp\htdocs\pcru-activity\frontend\models\UserOfficer.php	/^    public function getUser()$/;"	function	line:58
+UserSearch	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^class UserSearch extends User$/;"	class	line:14
+rules	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^    public function rules()$/;"	function	line:19
+scenarios	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^    public function scenarios()$/;"	function	line:30
+search	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^    public function search($params,$data=['query'=>null,'page'=>10])$/;"	function	line:43
+query	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^        $query=$data['query'];$/;"	variable	line:45
+query	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^            $query = User::find()->where('level_user!=:a or level_user=null',['a'=>User2::ADMIN]);$/;"	variable	line:47
+dataProvider	C:\xampp\htdocs\pcru-activity\frontend\models\UserSearch.php	/^        $dataProvider = new ActiveDataProvider([$/;"	variable	line:57

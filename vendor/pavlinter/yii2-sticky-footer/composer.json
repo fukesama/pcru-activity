@@ -1,0 +1,25 @@
+{
+    "name": "pavlinter/yii2-sticky-footer",
+    "description": "Yii2: Sticky Footer",
+    "keywords": ["yii2", "Sticky", "Footer", "stickyFooter", "jquery"],
+    "type": "yii2-extension",
+    "license": "BSD 3-Clause",
+    "support": {
+        "issues": "https://github.com/pavlinter/yii2-sticky-footer/issues",
+        "source": "https://github.com/pavlinter/yii2-sticky-footer"
+    },
+    "authors": [
+        {
+            "name": "Pavels Radajevs",
+            "email": "pavlinter@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "pavlinter\\": ""
+        }
+    }
+}

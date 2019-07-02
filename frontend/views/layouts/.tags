@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+JS	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\content.php	/^$JS=<<<JS$/;"	variable	line:15
+menuItems	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\header.php	/^$menuItems = [$/;"	variable	line:29
+Signup	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\header.php	/^						$Signup=Url::to(['\/site\/signup']);$/;"	variable	line:82
+Login	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\header.php	/^						$Login=Url::to(['\/site\/login']);$/;"	variable	line:83
+logout	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\header.php	/^$logout=Url::to(['\/site\/logout']);$/;"	variable	line:159
+script	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\header.php	/^$script=<<<Javascripte$/;"	variable	line:160
+postLogout	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\header.php	/^function postLogout() {$/;"	function	line:161
+url1	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\isguest_menu.php	/^$url1=Url::to(['frontend\/web\/img\/sidebar-1.jpg']);$/;"	variable	line:12
+url2	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\isguest_menu.php	/^$url2=Url::to(['frontend\/web\/img\/pcrulogo.png']);?>$/;"	variable	line:13
+colorbtnhover	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^<?php $colorbtnhover='#9931B0' ?>$/;"	variable	line:42
+url	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^$url=Url::to(['index']);$/;"	variable	line:157
+DM	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^$DM=new MD;$/;"	variable	line:158
+text	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^	$text=$DM->isAndroidOS()?'android':'window';$/;"	variable	line:160
+text	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^	$text='COM';$/;"	variable	line:167
+delete	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^$delete=Url::to(['delete']);$/;"	variable	line:169
+script	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^$script=<<<JS$/;"	variable	line:170
+is	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^* Override the default yii confirm dialog. This function is$/;"	function	line:172
+alert2	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^function alert2(message, title, buttonText) {$/;"	function	line:180
+click	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^			click: function () {$/;"	jsfunction	line:195
+yii.confirm	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^\/\/ yii.confirm = function (message, okCallback, cancelCallback) {$/;"	jsfunction	line:203
+confirm	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^\/\/ yii.confirm = function (message, okCallback, cancelCallback) {$/;"	jsfunction	line:203
+success	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^\/\/ 						success:function(response){$/;"	jsfunction	line:223
+script	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^$script=<<<JS$/;"	variable	line:244
+script	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^$script=<<<JS$/;"	variable	line:251
+positionFooter	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\main.php	/^	function positionFooter() {$/;"	function	line:261
+url1	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\not_isguest_menu.php	/^$url1=Url::to(['frontend\/web\/img\/sidebar-1.jpg']);$/;"	variable	line:12
+url2	C:\xampp\htdocs\pcru-activity\frontend\views\layouts\not_isguest_menu.php	/^$url2=Url::to(['frontend\/web\/img\/pcrulogo.png']);$/;"	variable	line:13
