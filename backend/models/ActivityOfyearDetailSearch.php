@@ -16,10 +16,10 @@ class ActivityOfyearDetailSearch extends ActivityOfyearDetail
      */
     public function rules()
     {
-        return [
-            [['acoyd_id'], 'integer'],
-            [['acoy_id', 'ac_startdate', 'ac_enddate', 'address_detail', 'detail'], 'safe'],
-        ];
+    	return [
+    		[['acoyd_id'], 'integer'],
+    		[['acoy_id', 'ac_startdate', 'ac_enddate', 'address_detail', 'detail','year','ac_id'], 'safe'],
+    	];
     }
 
     /**
@@ -28,7 +28,7 @@ class ActivityOfyearDetailSearch extends ActivityOfyearDetail
     public function scenarios()
     {
         // bypass scenarios() implementation in the parent class
-        return Model::scenarios();
+    	return Model::scenarios();
     }
 
     /**
@@ -41,35 +41,38 @@ class ActivityOfyearDetailSearch extends ActivityOfyearDetail
     public function search($params,$query=null)
     {
     	if($query==null){
-    		 $query = ActivityOfyearDetail::find();
+    		$query = ActivityOfyearDetail::find();
     	}
-       
+    	$query->innerJoinWith('acoy as acoy');
+    	$query->innerJoinWith('acoy.ac as ac');
 
         // add conditions that should always apply here
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
+    	$dataProvider = new ActiveDataProvider([
+    		'query' => $query,
+    	]);
 
-        $this->load($params);
+    	$this->load($params);
 
-        if (!$this->validate()) {
+    	if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
-            return $dataProvider;
-        }
+    		return $dataProvider;
+    	}
 
         // grid filtering conditions
-        $query->andFilterWhere([
-            'acoyd_id' => $this->acoyd_id,
-            'ac_startdate' => $this->ac_startdate,
-            'ac_enddate' => $this->ac_enddate,
-        ]);
+    	$query->andFilterWhere([
+    		'acoyd_id' => $this->acoyd_id,
+    		'acoy.ac.ac_id' => $this->ac_id,
+            // 'ac_startdate' => $this->ac_startdate,
+            // 'ac_enddate' => $this->ac_enddate,
+    	]);
 
-        $query->andFilterWhere(['like', 'acoy_id', $this->acoy_id])
-            ->andFilterWhere(['like', 'address_detail', $this->address_detail])
-            ->andFilterWhere(['like', 'detail', $this->detail]);
+    	$query->andFilterWhere(['like', 'acoy_id', $this->acoy_id])
+    	->andFilterWhere(['like', 'address_detail', $this->address_detail])
+    	->andFilterWhere(['like', 'detail', $this->detail])
+    	->andFilterWhere(['like', 'ac_startdate', $this->year]);
 
-        return $dataProvider;
+    	return $dataProvider;
     }
 }

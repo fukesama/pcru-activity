@@ -288,16 +288,43 @@ class SiteController extends Controller
 	public function actionProject()
 	{
 		$model=ActivityOfyearDetail::find()->orderBy(['ac_startdate'=>SORT_DESC]);
-		
+		$params=Yii::$app->request->queryParams;
+		if(!isset($params['ActivityOfyearDetailSearch']['year'])){
+			$params['ActivityOfyearDetailSearch']['year']=date('Y')+543;
+			$model->where(['like','ac_startdate',$params['ActivityOfyearDetailSearch']['year']]);
+		}
 		$searchModel = new ActivityOfyearDetailSearch();
-		$dataProvider = $searchModel->search(Yii::$app->request->queryParams,$model);
+		$dataProvider = $searchModel->search($params,$model);
 
 		return $this->render('project', [
 			'searchModel' => $searchModel,
 			'dataProvider' => $dataProvider,
 		]);
 	}
+	
 	public function actionReportProject($acoyd_id)
+	{
+		$acen=ActivityEnter::find()->where(['acoyd_id'=>$acoyd_id])->all();
+		// $count=0;
+		// foreach ($acen as $value) {
+		// 	$count+=ActivityEnterDetail::find()->where(['acen_id'=>$value->acen_id])->count();
+		// 	if($count>0){
+		// 		break;
+		// 	}
+		// }
+
+		// if($acoyd_id==''||$acoyd_id==null||!isset($acoyd_id)||$count==0){
+		// 	Yii::$app->session->setFlash('warning','ไม่มีข้อมูล');
+		// 	return $this->goBack();
+		// }
+		$model=ActivityOfyearDetail::find()->where(['acoyd_id'=>$acoyd_id])->one();	
+		ini_set("pcre.backtrack_limit", "50000000");
+
+		$content = $this->renderPartial('report_project',['model'=>$model,'acoyd_id'=>$acoyd_id]);
+		$pdf=$this->pdf($content);
+		return $pdf->render();
+	}
+	public function actionReportProject2($acoyd_id)
 	{
 		$acen=ActivityEnter::find()->where(['acoyd_id'=>$acoyd_id])->all();
 		$count=0;
@@ -314,8 +341,32 @@ class SiteController extends Controller
 		}
 		$model=ActivityOfyearDetail::find()->where(['acoyd_id'=>$acoyd_id])->one();	
 		
-
+		ini_set("pcre.backtrack_limit", "50000000");
 		$content = $this->renderPartial('report_project2',['model'=>$model]);
+		$pdf=$this->pdf($content);
+		return $pdf->render();
+	}
+	public function actionReportProject3($acoyd_id)
+	{
+		// $acen=ActivityEnter::find()->where(['acoyd_id'=>$acoyd_id])->all();
+		// $count=0;
+		// foreach ($acen as $value) {
+		// 	$count+=ActivityEnterDetail::find()->where(['acen_id'=>$value->acen_id])->count();
+		// 	if($count>0){
+		// 		break;
+		// 	}
+		// }
+
+		// if($acoyd_id==''||$acoyd_id==null||!isset($acoyd_id)||$count==0){
+		// 	Yii::$app->session->setFlash('warning','ไม่มีข้อมูล');
+		// 	return $this->goBack();
+		// }
+		$model=ActivityOfyearDetail::find()->where(['acoyd_id'=>$acoyd_id])->one();	
+		
+		ini_set("pcre.backtrack_limit", "50000000");
+		// return $this->render('report_project3',['model'=>$model]);
+		// return $this->renderPartial('report_project3',['model'=>$model]);
+		$content = $this->renderPartial('report_project3',['model'=>$model]);
 		$pdf=$this->pdf($content);
 		return $pdf->render();
 	}
