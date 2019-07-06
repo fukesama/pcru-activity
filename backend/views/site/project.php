@@ -10,6 +10,7 @@ use yii\helpers\Json;
 
 use kartik\widgets\Select2;
 use yii\helpers\ArrayHelper;
+use backend\models\ActivityOfyearDetailSearch;
 
 use yii\grid\GridView;
 
@@ -17,7 +18,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\ActivityOfyearDetailSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'รายงานโครงการตามวันที่ดำเนินการ';
+$this->title = 'รายงานการเข้าร่วมกิจกรรม';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
@@ -50,44 +51,96 @@ $this->params['breadcrumbs'][] = $this->title;
 						">
 
 					</h4>
-				
+
 				</div>
 				<br>
-				<br>
+				<br>	
+	<br>
+				<?= $this->render('_project',['model'=>$searchModel,'params'=>Yii::$app->request->queryParams]) ?>
 				<div class="container-fluid">
 					<div class="table-responsive" style='margin-bottom:10px'>
 						<?= GridView::widget([
 							'dataProvider' => $dataProvider,
 							// 'filterModel' => $searchModel,
 							'columns' => [
-								['class' => 'yii\grid\SerialColumn'],								
+								['class' => 'yii\grid\SerialColumn'],	
+								[
+									'attribute'=>'acoy.acoy_id',
+									'label'=>'รหัสกิจกรรม',
+									
+								],							
 								
 								[
 									'attribute'=>'acoy.ac.ac_name',
-									'label'=>'ชื่อกิจกรรม',
-									'format'=>'raw',
-									'value'=>function($model){										
-										return  Html::a($model->acoy->ac->ac_name,
-											Url::to(['site/report-project?acoyd_id='.$model->acoyd_id]),
-											['target'=>'_blank']);
-									}
+									'label'=>'ชื่อกิจกรรม',									
 								],
+								[
+									'attribute'=>'acoy.edu_level',
+									'label'=>'ชั้นปี',
+									'format'=>'raw',									
+								],	
 								
 								[
-									'attribute'=>'ac_startdate',
+									'attribute'=>'year',
+									'label'=>'ปี',
 									'format'=>'raw',
 									'value'=>function($model){
-
-										return Yii::$app->Func->DateThai($model->ac_startdate);
+										$d=$model->ac_startdate;
+										return $d[0].$d[1].$d[2].$d[3];
 									}
-								],
+								],								
 								[
-									'attribute'=>'ac_enddate',
-									'format'=>'raw',
-									'value'=>function($model){
-										return Yii::$app->Func->DateThai($model->ac_enddate);
-									}
-								],		
+									'class' => 'yii\grid\ActionColumn',
+									'header'=>'รายงานรายชื่อนักศึกษา',
+									'headerOptions'=>['class'=>'text-center'],
+									'contentOptions'=>['width'=>'200px'],
+									'options'=>['width'=>'110px'],
+									'template'=>'{have}{enter}{unenter}',
+									'buttons'=>[
+										'have'=>function($url,$model,$key){
+											$url=Url::to(['site/report-project','acoyd_id'=>$model->acoyd_id]);
+											return
+											Html::a('
+												ผู้มีสิทธิ์
+												',$url,
+												[
+													'class'=>'btn btn-sm btn-primary',
+													"style" => "cursor: pointer;",
+													"title" => "ผู้มีสิทธิ์",
+													'target'=> '_blank'
+												]
+											);
+										},
+										'enter'=>function($url,$model,$key){
+											$url=Url::to(['site/report-project2','acoyd_id'=>$model->acoyd_id]);
+											return
+											Html::a('
+												เข้าร่วม
+												',$url,
+												[
+													'class'=>'btn btn-sm btn-success',
+													"style" => "cursor: pointer;",
+													"title" => "เข้าร่วม",
+													'target'=> '_blank'
+												]
+											);
+										},
+										'unenter'=>function($url,$model,$key){
+											$url=Url::to(['site/report-project3','acoyd_id'=>$model->acoyd_id]);
+											return
+											Html::a('
+												ไม่เข้าร่วม
+												',$url,
+												[
+													'class'=>'btn btn-sm btn-warning',
+													"style" => "cursor: pointer;",
+													"title" => "ไม่เข้าร่วม",
+													'target'=> '_blank'
+												]
+											);
+										},
+									],
+								]		
 								// 'address_detail',
 								// 'detail:ntext',
 
