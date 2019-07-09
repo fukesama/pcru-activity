@@ -103,7 +103,7 @@ class ActivityOfyearDetailController extends Controller
     	$model = $this->findModel($id);
 
     	if ($model->load(Yii::$app->request->post())) {
-    		    		if($model->save()){
+    		if($model->save()){
     			return $this->redirect(['view', 'id' => $model->acoyd_id]);
     		}
 
@@ -217,16 +217,17 @@ class ActivityOfyearDetailController extends Controller
     }
     public function print($model,$start,$end,$ac_name,$date1,$date2){
         //$this->Qrcode($id);
-    	$this->label='Qr Code กิจกรรม';
+    	
 
-    	$ac_name=(ActivityOfyearDetail::find()->where(['acoyd_id'=>$ac_name])->asArray()->one())['acoy_id'];
+    	$model2=(ActivityOfyearDetail::find()->where(['acoyd_id'=>$ac_name])->one());
+    	$ac_name=$model2->acoy_id;
     	// print_r($ac_name);
     	// 		return ;
 
         // $qrCode=$this->Qrcode($id,$size,$logosize,$font)['data'];
 
-
-    	$name='QrCode กิจกรรม.pdf';
+    	$this->label=$model2->acoy->ac->ac_name;
+    	$name=$this->label.'.pdf';
         //$this->title=$name;
     	$content = $this->renderPartial('print',['model'=>$model,'ac_name'=>$ac_name]);
 
@@ -326,7 +327,8 @@ class ActivityOfyearDetailController extends Controller
     	while ($start<=$end) {
     		$str='';
     		$str=$text.' '.$start.' '.strtotime($date);
-    		$filename=$date.' '.$start;
+    		// $filename=$date.' '.$start;
+    		$filename=$str;
     		$arr[]=$filename;
     		// $str=Yii::$app->Func->encode($str);
     		$this->qrCodeGen($str,$filename);
@@ -334,15 +336,7 @@ class ActivityOfyearDetailController extends Controller
     	}
     	return $arr;
     }
-    protected function unlinkQr(Int $start,Int $end,String $text, String $date):void{
-    	while ($start<=$end) {
-    		$str='';
-    		$str=$text.' '.$start.' '.$date;
-            // echo"Deleted $str <br />";
-    		$this->deleteQr($date.' '.$start);
-    		$start++;
-    	}
-    }
+   
 
 
     /**
@@ -351,26 +345,19 @@ class ActivityOfyearDetailController extends Controller
     * @param [type] $file [description]
     */
     public function qrCodeGen($text,$filename):void{
-    	$qrCode=$this->renderQrcode($text,80);
+    	$qrCode=$this->renderQrcode($text,180);
     	$qrCode->writeFile($this->dir().$filename.'.png');
     	$qrCode->writeString();
     }
-    /**
-    * [actionQrcode description]
-    * @param  [type]  $id       [description]
-    * @param  integer $size     [description]
-    * @param  integer $logosize [description]
-    * @param  integer $font     [description]
-    * @return [type]            [description]
-    */
-    public function actionQrcode($id,$size=300,$logosize=50,$font=16){
 
-    	$qrCode=$this->Qrcode($id,$size,$logosize,$font)['data'];
-    	echo $qrCode->writeString();
-    	echo (new QrCodeResponse($qrCode));
-    	$this->deleteQr($id);
+    // public function actionQrcode($id,$size=300,$logosize=50,$font=16){
 
-    }
+    // 	$qrCode=$this->Qrcode($id,$size,$logosize,$font)['data'];
+    // 	echo $qrCode->writeString();
+    // 	echo (new QrCodeResponse($qrCode));
+    // 	$this->deleteQr($id);
+
+    // }
     public function qrcode($id,$size=300,$logosize=50,$font=16){
 
         // $qrCode=$this->renderQrcode($id,$size,$logosize,$font)['data'];

@@ -216,27 +216,27 @@ $this->params['breadcrumbs'][] = $this->title;
 								}
 
 							],
-							[
-								'attribute'=>'enter_status',
-								'format'=>'raw',
-								'headerOptions'=>['class'=>'text-center'],
-								'filterType'=>GridView::FILTER_SELECT2,	
-								'contentOptions'=>['width'=>'100px','class'=>'text-center'],
-								'value'=>function($model){
-									return $model->enter_status=='1'?'ยังไม่ได้เข้าร่วม':'เข้าร่วม';
-								},
-								'filter'=>['1'=>'ยังไม่ได้เข้าร่วม','2'=>'เข้าร่วมแล้ว']
-							],
-							[
-								'attribute'=>'result',
-								'format'=>'raw',
-								'filterType'=>GridView::FILTER_SELECT2,								
-								'contentOptions'=>['width'=>'100px','class'=>'text-center'],	
-								'value'=>function($model){
-									return $model->result==''?'-':$model->result;
-								},
-								'filter'=>[''=>'-','ผ.'=>'ผ.','ม.ผ.'=>'ม.ผ.']
-							],	
+							// [
+							// 	'attribute'=>'enter_status',
+							// 	'format'=>'raw',
+							// 	'headerOptions'=>['class'=>'text-center'],
+							// 	'filterType'=>GridView::FILTER_SELECT2,	
+							// 	'contentOptions'=>['width'=>'100px','class'=>'text-center'],
+							// 	'value'=>function($model){
+							// 		return $model->enter_status=='1'?'ยังไม่ได้เข้าร่วม':'เข้าร่วม';
+							// 	},
+							// 	'filter'=>['1'=>'ยังไม่ได้เข้าร่วม','2'=>'เข้าร่วมแล้ว']
+							// ],
+							// [
+							// 	'attribute'=>'result',
+							// 	'format'=>'raw',
+							// 	'filterType'=>GridView::FILTER_SELECT2,								
+							// 	'contentOptions'=>['width'=>'100px','class'=>'text-center'],	
+							// 	'value'=>function($model){
+							// 		return $model->result==''?'-':$model->result;
+							// 	},
+							// 	'filter'=>[''=>'-','ผ.'=>'ผ.','ม.ผ.'=>'ม.ผ.']
+							// ],	
 
 							Yii::$app->Func->AcColumn(),
 
@@ -246,9 +246,9 @@ $this->params['breadcrumbs'][] = $this->title;
 							[
 								'dataProvider' => $dataProvider,
 								'filterModel' => $searchModel,							
-								'panel'=>[
-									'before'=>' '
-								],
+								// 'panel'=>[
+								// 	'before'=>' '
+								// ],
 								'export'=>[
 
 								],

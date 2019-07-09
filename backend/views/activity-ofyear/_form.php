@@ -29,7 +29,7 @@ use yii\helpers\ArrayHelper;
 						],
 						'pluginOptions' => [
 							'allowClear' => true,
-							'multiple' => true
+							
 						],
 					]);
 					echo '</div>';

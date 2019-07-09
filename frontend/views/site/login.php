@@ -43,9 +43,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
-        <div style="text-align: center">
+        <!-- <div style="text-align: center">
             Download Mobile App : <a href="<?= Url::to(['frontend/web/PCRUAc.apk']);?>" target='_blank'>PCRUAc.apk (Andoird only)</a>
-        </div>
+        </div> -->
 
     </div>
 </div>

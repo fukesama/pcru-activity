@@ -28,7 +28,7 @@ use kartik\mpdf\Pdf;
 * ActivityOfyearController implements the CRUD actions for ActivityOfyear model.
 */
 class data{
-    public $data;
+	public $data;
 }
 class ActivityOfyearController extends Controller
 {
@@ -37,14 +37,14 @@ class ActivityOfyearController extends Controller
     */
     public function behaviors()
     {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
+    	return [
+    		'verbs' => [
+    			'class' => VerbFilter::className(),
+    			'actions' => [
+    				'delete' => ['POST'],
+    			],
+    		],
+    	];
     }
 
     /**
@@ -55,9 +55,9 @@ class ActivityOfyearController extends Controller
     */
     public function actionView($id)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+    	return $this->render('view', [
+    		'model' => $this->findModel($id),
+    	]);
     }
 
     /**
@@ -65,28 +65,28 @@ class ActivityOfyearController extends Controller
     * If creation is successful, the browser will be redirected to the 'view' page.
     * @return mixed
     */
-   public function actionFuke(){
-        return $this->render('fuke');
-   }
+    public function actionFuke(){
+    	return $this->render('fuke');
+    }
     public function actionCreate()
     {
-        $model = new ActivityOfyear();
+    	$model = new ActivityOfyear();
 
-        if ($model->load(Yii::$app->request->post())) {
-            if(strtotime($_POST['ActivityOfyear']['ac_startdate'])>strtotime($_POST['ActivityOfyear']['ac_enddate'])){
-                Yii::$app->session->setFlash('error','วันที่เริ่มต้นต้องน้อยกว่าวันที่สิ้นสุดกิจกรรม');
-                return $this->render('create', [
-                    'model' => $model,
-                ]);
-            }
-            if($model->save()){
-                return $this->redirect(['view', 'id' => $model->acoy_id]);
-            }
-        }
+    	if ($model->load(Yii::$app->request->post())) {
+    		if(strtotime($_POST['ActivityOfyear']['ac_startdate'])>strtotime($_POST['ActivityOfyear']['ac_enddate'])){
+    			Yii::$app->session->setFlash('error','วันที่เริ่มต้นต้องน้อยกว่าวันที่สิ้นสุดกิจกรรม');
+    			return $this->render('create', [
+    				'model' => $model,
+    			]);
+    		}
+    		if($model->save()){
+    			return $this->redirect(['view', 'id' => $model->acoy_id]);
+    		}
+    	}
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+    	return $this->render('create', [
+    		'model' => $model,
+    	]);
     }
 
 
@@ -100,24 +100,24 @@ class ActivityOfyearController extends Controller
     */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+    	$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            if(strtotime($_POST['ActivityOfyear']['ac_startdate'])>strtotime($_POST['ActivityOfyear']['ac_enddate'])){
-                Yii::$app->session->setFlash('error','วันที่เริ่มต้นต้องน้อยกว่าวันที่สิ้นสุดกิจกรรม');
-                return $this->render('create', [
-                    'model' => $model,
-                ]);
-            }
-            if($model->save()){
-                return $this->redirect(['view', 'id' => $model->acoy_id]);
-            }
+    	if ($model->load(Yii::$app->request->post()) && $model->save()) {
+    		if(strtotime($_POST['ActivityOfyear']['ac_startdate'])>strtotime($_POST['ActivityOfyear']['ac_enddate'])){
+    			Yii::$app->session->setFlash('error','วันที่เริ่มต้นต้องน้อยกว่าวันที่สิ้นสุดกิจกรรม');
+    			return $this->render('create', [
+    				'model' => $model,
+    			]);
+    		}
+    		if($model->save()){
+    			return $this->redirect(['view', 'id' => $model->acoy_id]);
+    		}
 
-        }
+    	}
 
-        return $this->render('update', [
-            'model' => $model,
-        ]);
+    	return $this->render('update', [
+    		'model' => $model,
+    	]);
     }
 
     /**
@@ -129,9 +129,9 @@ class ActivityOfyearController extends Controller
     */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+    	$this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+    	return $this->redirect(['index']);
     }
 
     /**
@@ -143,20 +143,20 @@ class ActivityOfyearController extends Controller
     */
     public function actionAc()
     {
-        if (Yii::$app->request->isAjax) {
-            $data = Yii::$app->request->post();
-            $res=0;
-            if($data['acoy_id']!==''&&$data['acoy_id']!==null){
-                $res= explode(":", $data['acoy_id']);
-                $res=ActivityOfYear::find()->select('qr_num,ac_startdate,ac_enddate')->where(['acoy_id'=>$res])->one();
-            }
+    	if (Yii::$app->request->isAjax) {
+    		$data = Yii::$app->request->post();
+    		$res=0;
+    		if($data['acoy_id']!==''&&$data['acoy_id']!==null){
+    			$res= explode(":", $data['acoy_id']);
+    			$res=ActivityOfYear::find()->select('qr_num,ac_startdate,ac_enddate')->where(['acoy_id'=>$res])->one();
+    		}
 
 
-            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-            return [
-                'data' => $res,
-            ];
-        }
+    		\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+    		return [
+    			'data' => $res,
+    		];
+    	}
     }
 
     /**
@@ -165,211 +165,211 @@ class ActivityOfyearController extends Controller
     */
     public function actionIndex()
     {
-        $query=ActivityOfYear::find()->orderBy(['acoy_id'=>SORT_DESC]);
-        $searchModel = new ActivityOfyearSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$query);
+    	$query=ActivityOfYear::find()->orderBy(['acoy_id'=>SORT_DESC]);
+    	$searchModel = new ActivityOfyearSearch();
+    	$dataProvider = $searchModel->search(Yii::$app->request->queryParams,$query);
 
-        return $this->render('index', 
-            [
-                'searchModel' => $searchModel,
-                'dataProvider' => $dataProvider,
-            ]
-        );
+    	return $this->render('index', 
+    		[
+    			'searchModel' => $searchModel,
+    			'dataProvider' => $dataProvider,
+    		]
+    	);
     }
     public function actionPreQrcode()
     {
 
-        $model = new ActivityOfyear();
+    	$model = new ActivityOfyear();
 
-        if (Yii::$app->request->post()) {
-            $post=Yii::$app->request->post();
-            if($post['acoy_id']!==null||$post['qr_num_plus]']==0){
+    	if (Yii::$app->request->post()) {
+    		$post=Yii::$app->request->post();
+    		if($post['acoy_id']!==null||$post['qr_num_plus]']==0){
                 //เปิดการเชื่อมต่อนานขึ้นหรือน้อยลง
-                ini_set('max_execution_time', 9999);
-                $model=$this->findModel($post['acoy_id']);
+    			ini_set('max_execution_time', 9999);
+    			$model=$this->findModel($post['acoy_id']);
 
-                $start=$post['qr_now']+1;
-                $end=$post['total'];
-                $text=$post['acoy_id'];
-                $date1=$model->ac_startdate;
-                $date2=$model->ac_enddate;
-                $arr=[];
-                $str= Url::to(['/web/activity-of-year/']);
-                $files =  glob('../activity-of-year/');
+    			$start=$post['qr_now']+1;
+    			$end=$post['total'];
+    			$text=$post['acoy_id'];
+    			$date1=$model->ac_startdate;
+    			$date2=$model->ac_enddate;
+    			$arr=[];
+    			$str= Url::to(['/web/activity-of-year/']);
+    			$files =  glob('../activity-of-year/');
 
                 // echo $dir =Yii::getAlias('@web').'/activity-of-year/';
                    // $this->deleteAll($dir);
-                while(true){
-                    if(strtotime($date1)>strtotime($date2)){
-                        break;
-                    }
-                    $arr["$date1"]=$this->HaveDate($start,$end,$text,$date1);
-                    $date1= date('Y-m-d',strtotime($date1.'+ 1 days'));
-                };
-                if($model->save()){
-                    $model->qr_num=$post['total'];
-                    $model->save();                   
-                }
+    			while(true){
+    				if(strtotime($date1)>strtotime($date2)){
+    					break;
+    				}
+    				$arr["$date1"]=$this->HaveDate($start,$end,$text,$date1);
+    				$date1= date('Y-m-d',strtotime($date1.'+ 1 days'));
+    			};
+    			if($model->save()){
+    				$model->qr_num=$post['total'];
+    				$model->save();                   
+    			}
 
-                return $this->print($arr,$start,$end,$text,$date1,$date2);
-            }
-            else{
-                return $this->redirect(['index']);
-            }
-        }
-        else{
-            return $this->render('qrcode', [
-                'model' => $model,
-            ]);
-        }
+    			return $this->print($arr,$start,$end,$text,$date1,$date2);
+    		}
+    		else{
+    			return $this->redirect(['index']);
+    		}
+    	}
+    	else{
+    		return $this->render('qrcode', [
+    			'model' => $model,
+    		]);
+    	}
     }
 
     
 
     protected function deleteAll($str) {
     //It it's a file.
-        if (is_file($str)) {
+    	if (is_file($str)) {
         //Attempt to delete it.
-            return unlink($str);
-        }
+    		return unlink($str);
+    	}
     //If it's a directory.
-        elseif (is_dir($str)) {
+    	elseif (is_dir($str)) {
         //Get a list of the files in this directory.
-            $scan = glob($str.'activity-of-year/{,.}*', GLOB_BRACE);
+    		$scan = glob($str.'activity-of-year/{,.}*', GLOB_BRACE);
         //Loop through the list of files.
-            foreach($scan as $index=>$path) {
+    		foreach($scan as $index=>$path) {
             //Call our recursive function.
-                $this->deleteAll($path);
-            }
+    			$this->deleteAll($path);
+    		}
         //Remove the directory itself.
             // return @rmdir($str);
-        }
+    	}
 
 
     }
     public function print($model,$start,$end,$ac_name,$date1,$date2){
         //$this->Qrcode($id);
-        $this->label='Qr Code กิจกรรม';
+    	$this->label='Qr Code กิจกรรม';
 
         // $qrCode=$this->Qrcode($id,$size,$logosize,$font)['data'];
 
 
-        $name='QrCode กิจกรรม.pdf';
+    	$name='QrCode กิจกรรม.pdf';
         //$this->title=$name;
-        $content = $this->renderPartial('print',['model'=>$model,'ac_name'=>$ac_name]);
+    	$content = $this->renderPartial('print',['model'=>$model,'ac_name'=>$ac_name]);
 
 
 
-        $pdf = new Pdf([
-            'mode' => Pdf::MODE_UTF8,
-            'format' => Pdf::FORMAT_A4,
-            'orientation' => Pdf::ORIENT_PORTRAIT,
-            'destination' => Pdf::DEST_BROWSER,
-            'filename' => $name,
-            'marginLeft' => 10,
-            'marginRight' => 10,
-            'marginTop' => 10,
-            'marginBottom' => 10,
-            'content' => $content,
+    	$pdf = new Pdf([
+    		'mode' => Pdf::MODE_UTF8,
+    		'format' => Pdf::FORMAT_A4,
+    		'orientation' => Pdf::ORIENT_PORTRAIT,
+    		'destination' => Pdf::DEST_BROWSER,
+    		'filename' => $name,
+    		'marginLeft' => 10,
+    		'marginRight' => 10,
+    		'marginTop' => 10,
+    		'marginBottom' => 10,
+    		'content' => $content,
 
-            'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
-            'cssInline' => '
-            .divtable{
-                border-collapse:collapse;
-                table-layout:fixed;
-                overflow:wrap;
-                width:100%;
-            }
-            .divtable tr th,.divtable tr td{
-                vertical-align:top;
-            }
-            body {
-                font-size:18px
-            }
+    		'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
+    		'cssInline' => '
+    		.divtable{
+    			border-collapse:collapse;
+    			table-layout:fixed;
+    			overflow:wrap;
+    			width:100%;
+    		}
+    		.divtable tr th,.divtable tr td{
+    			vertical-align:top;
+    		}
+    		body {
+    			font-size:18px
+    		}
 
-            p {
-                margin-bottom: 3px;
-            }
-            .head {
-                width: 275px;
-                float: left;
-                margin-bottom: 1px;
-            }
-            .head-right {
-                width: 220px;
-                float: left;
-            }
+    		p {
+    			margin-bottom: 3px;
+    		}
+    		.head {
+    			width: 275px;
+    			float: left;
+    			margin-bottom: 1px;
+    		}
+    		.head-right {
+    			width: 220px;
+    			float: left;
+    		}
 
-            .container{
-                position:relative;
-            }
-            div .h1{
-                position:absolute;left:0;top:0;
-            }
-            div .h2{
-                position:absolute;left:auto;right:auto;top:0;
-            }
-            .dottedunderline{
-                text-decoration:underline dotted black
-            }
+    		.container{
+    			position:relative;
+    		}
+    		div .h1{
+    			position:absolute;left:0;top:0;
+    		}
+    		div .h2{
+    			position:absolute;left:auto;right:auto;top:0;
+    		}
+    		.dottedunderline{
+    			text-decoration:underline dotted black
+    		}
             #repair_user{
-            float: right;
-            width: 250px;
-            clear: left;        }
-            td.small {line-height: 90%}
-            table.big {
-                line-height: 140%;
-            }
-            .line{
-                border-bottom:#333 1.9px dotted
-            }
-            .table {
-                border: 1px solid #000;
-                border-collapse: collapse;
-                font-size:16px;
-            }
-            .clear{clear:both; line-height:0; height:0; font-size: 1px}
-            .box-1{width:250px;  float:left}
-            .box-2{width:250px;   float:right;}
-            .block{width: 245px; margin: 5px; float: left; height:100px;}',
-            'options' => ['title' => $name],
-            'methods' => [
+    		float: right;
+    		width: 250px;
+    		clear: left;        }
+    		td.small {line-height: 90%}
+    		table.big {
+    			line-height: 140%;
+    		}
+    		.line{
+    			border-bottom:#333 1.9px dotted
+    		}
+    		.table {
+    			border: 1px solid #000;
+    			border-collapse: collapse;
+    			font-size:16px;
+    		}
+    		.clear{clear:both; line-height:0; height:0; font-size: 1px}
+    		.box-1{width:250px;  float:left}
+    		.box-2{width:250px;   float:right;}
+    		.block{width: 245px; margin: 5px; float: left; height:100px;}',
+    		'options' => ['title' => $name],
+    		'methods' => [
                 //'SetHeader'=>['Krajee Report Header'],
                 //'SetFooter'=>['{PAGENO}'],
-            ]
-        ]);
-        $pdf=$pdf->render();
+    		]
+    	]);
+    	$pdf=$pdf->render();
 
 
-        return $pdf;
+    	return $pdf;
 
     }
     /**
     * [actionQrFromArray description]
     * @return [type] [description]
     */
-   
+
     protected function HaveDate(Int $start,Int $end,String $text, String $date):Array{
-        $arr=[];
-        while ($start<=$end) {
-            $str='';
-            $str=$text.' '.$start.' '.$date;
-            $filename=$date.' '.$start;
-            $arr[]=$filename;
-            $str=Yii::$app->Func->encode($str);
-            $this->qrCodeGen($str,$filename);
-            $start++;
-        }
-        return $arr;
+    	$arr=[];
+    	while ($start<=$end) {
+    		$str='';
+    		$str=$text.' '.$start.' '.$date;
+    		$filename=$date.' '.$start;
+    		$arr[]=$filename;
+    		$str=Yii::$app->Func->encode($str);
+    		$this->qrCodeGen($str,$filename);
+    		$start++;
+    	}
+    	return $arr;
     }
     protected function unlinkQr(Int $start,Int $end,String $text, String $date):void{
-        while ($start<=$end) {
-            $str='';
-            $str=$text.' '.$start.' '.$date;
+    	while ($start<=$end) {
+    		$str='';
+    		$str=$text.' '.$start.' '.$date;
             // echo"Deleted $str <br />";
-            $this->deleteQr($date.' '.$start);
-            $start++;
-        }
+    		$this->deleteQr($date.' '.$start);
+    		$start++;
+    	}
     }
 
 
@@ -379,9 +379,9 @@ class ActivityOfyearController extends Controller
     * @param [type] $file [description]
     */
     public function qrCodeGen($text,$filename):void{
-        $qrCode=$this->renderQrcode($text,80);
-        $qrCode->writeFile($this->dir().$filename.'.png');
-        $qrCode->writeString();
+    	$qrCode=$this->renderQrcode($text,90);
+    	$qrCode->writeFile($this->dir().$filename.'.png');
+    	$qrCode->writeString();
     }
     /**
     * [actionQrcode description]
@@ -393,56 +393,56 @@ class ActivityOfyearController extends Controller
     */
     public function actionQrcode($id,$size=300,$logosize=50,$font=16){
 
-        $qrCode=$this->Qrcode($id,$size,$logosize,$font)['data'];
-        echo $qrCode->writeString();
-        echo (new QrCodeResponse($qrCode));
-        $this->deleteQr($id);
+    	$qrCode=$this->Qrcode($id,$size,$logosize,$font)['data'];
+    	echo $qrCode->writeString();
+    	echo (new QrCodeResponse($qrCode));
+    	$this->deleteQr($id);
 
     }
     public function qrcode($id,$size=300,$logosize=50,$font=16){
 
         // $qrCode=$this->renderQrcode($id,$size,$logosize,$font)['data'];
 
-        $qrCode=$this->renderQrcode($id,$size,$logosize,$font);
-        $qrCode->writeFile($this->dir().$id.'.png');
-        echo $qrCode->writeString();
-        echo (new QrCodeResponse($qrCode));
+    	$qrCode=$this->renderQrcode($id,$size,$logosize,$font);
+    	$qrCode->writeFile($this->dir().$id.'.png');
+    	echo $qrCode->writeString();
+    	echo (new QrCodeResponse($qrCode));
         // $this->deleteQr($id);
 
 
     }
     protected $label='';
     protected function dir(){
-        return dirname(__DIR__).'/web/activity-of-year/';
+    	return dirname(__DIR__).'/web/activity-of-year/';
     }
     protected function deleteQr($id){
-        unlink($this->dir().$id.'.png');
+    	unlink($this->dir().$id.'.png');
     }
     protected function renderQrcode($id,$size=100,$logosize=15,$font=10){
 
-        $qrCode = new QrCode($id);
-        $qrCode->setSize($size);
-
+    	$qrCode = new QrCode($id);
+    	$qrCode->setSize($size);
+    	$this->label=$id;
         // Set advanced options
-        $qrCode->setWriterByName('png');
+    	$qrCode->setWriterByName('png');
         //$qrCode->setWriterByName('png');
-        $qrCode->setMargin(2);
-        $qrCode->setEncoding('UTF-8');
-        $qrCode->setErrorCorrectionLevel(new ErrorCorrectionLevel(ErrorCorrectionLevel::HIGH));
-        $qrCode->setForegroundColor(['r' => 0, 'g' => 0, 'b' => 0, 'a' => 0]);
-        $qrCode->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255, 'a' => 0]);
-        if($this->label!==''){
-            $id=Yii::$app->Func->decode($id);
-            $id=explode(' ',$id)[0];
-            $qrCode->setLabel($id, $font);
-        }
+    	$qrCode->setMargin(2);
+    	$qrCode->setEncoding('UTF-8');
+    	$qrCode->setErrorCorrectionLevel(new ErrorCorrectionLevel(ErrorCorrectionLevel::HIGH));
+    	$qrCode->setForegroundColor(['r' => 0, 'g' => 0, 'b' => 0, 'a' => 0]);
+    	$qrCode->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255, 'a' => 0]);
+    	if($this->label!==''){
+    		$id=Yii::$app->Func->decode($id);
+    		$id=explode(' ',$id)[0];
+    		$qrCode->setLabel($id, $font);
+    	}
         //$qrCode->setLogoPath(dirname(__DIR__).'/web/img/qrcode.png');
         // $qrCode->setLogoWidth($logosize);
 
-        $qrCode->setValidateResult(false);
+    	$qrCode->setValidateResult(false);
 
         // Directly output the QR code
-        header('Content-Type: '.$qrCode->getContentType());
+    	header('Content-Type: '.$qrCode->getContentType());
 
 
 
@@ -450,16 +450,16 @@ class ActivityOfyearController extends Controller
         // $qrCode->writeFile($this->dir().$id.'.png');
         // Create a response object
 
-        return $qrCode;
+    	return $qrCode;
     }
 
 
     protected function findModel($id)
     {
-        if (($model = ActivityOfyear::findOne($id)) !== null) {
-            return $model;
-        }
+    	if (($model = ActivityOfyear::findOne($id)) !== null) {
+    		return $model;
+    	}
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+    	throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

@@ -41,10 +41,8 @@ ini_set('max_execution_time', 99999);
 	while($now<=$range):
 		if($now!=0){
 			$date=Yii::$app->Func->DateThaiFull(date('Y-m-d',strtotime('+'.$now.' days',$start)));
-		}
-		
+		}		
 		?>
-
 		<div class="a4">
 			<div class="text-center" style="font-size:15px"><b>รายฃื่อผู้มีสิทธิ์เข้าร่วม<br>โครงการ<?= $model->acoy->ac->ac_name;?></b></div>
 			<div class="text-center">

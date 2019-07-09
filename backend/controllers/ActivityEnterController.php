@@ -288,6 +288,7 @@ class ActivityEnterController extends Controller
     				'contentOptions'=>['width'=>'100px']  					
     			]
     			,
+    			'group',
     			[
     				'attribute'=>'ver',
     				'label'=>'เลขที่',		
@@ -305,7 +306,7 @@ class ActivityEnterController extends Controller
     				'label'=>'สาขา',	
     				'contentOptions'=>['width'=>'100px']  						
     			],
-    			'group',
+    			
     			[
     				'attribute'=>'user_id as id',
     				'label'=>'ชื่อ - นามสกุล',							
