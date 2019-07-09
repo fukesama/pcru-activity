@@ -22,6 +22,7 @@ use yii\bootstrap\Modal;
 use kartik\widgets\DatePicker;
 use yii\jui\AutoComplete;
 use yii\web\JsExpression;
+use frontend\models\User as u;
 /* @var $this \yii\web\View */
 /* @var $content string */
 ?>
@@ -40,14 +41,14 @@ if (Yii::$app->user->isGuest) {
 	. Html::submitButton(
 		'Logout (' . Yii::$app->user->identity->username . ')',
 		['class' => 'btn btn-link logout']
-		)
-		. Html::endForm()
-		. '</li>';
-	}
+	)
+	. Html::endForm()
+	. '</li>';
+}
 
 
-	?>
-	<style>
+?>
+<style>
 	.btn .link:hover{
 		background-color: rgba(154, 154, 154, 1)
 	}
@@ -62,23 +63,16 @@ if (Yii::$app->user->isGuest) {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<!-- <?php //if (Yii::$app->user->isGuest) { ?>
-				<img src="<?php //echo Url::to(['frontend/web/img/pcrulogo.png']) ?>"
-				style="height: 40px;
-				display: block;
-				padding-top:10px;
-				float: left;
-				">
-				<?php //} ?> -->
 				<a class="navbar-brand" href="<?=Yii::getAlias('@web') ?>" style="">
 
 					<span style="font-weight: bold;display: block;">PCRU - Activity</span>
 				</a>
 			</div>
 			<div class="collapse navbar-collapse">
+
 				<ul class="nav navbar-nav navbar-right">
 					<?php
-					if (Yii::$app->user->isGuest) {
+					if (Yii::$app->user->isGuest) :
 
 						$Login=Url::to(['/site/login']);
 						?>
@@ -98,46 +92,58 @@ if (Yii::$app->user->isGuest) {
 						<?php
 						$menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
 						$menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-					} else {
+					else :
 
 
 						?>
 
 
-							<li>
-								<a href="#" style="font-weight: bold;" onclick="postLogout()">
+						<li>
+							<a href="#" style="font-weight: bold;" onclick="postLogout()">
 
-									<p class='hidden-lg hidden-md'>
+								<p class='hidden-lg hidden-md'>
+									<?php $u=u::findone(Yii::$app->user->identity->id);
+									$text='';
+									if($u->level_user='3'){
+										$text= ' '.$u->co->pre->pre_name.' '.$u->co->uc_fname.' '.$u->co->uc_lname;
+									}	
 
-										<i class="material-icons">person</i> Logout (<?=Yii::$app->user->identity->username;?>)
-									</p>
-									<p class='hidden-xs hidden-sm' style="float: left;">
-										<i class="material-icons" style="display: block;float: left;">person</i>Logout (<?=Yii::$app->user->identity->username;?>)
-									</p>
-								</a>
+									?>
+									<i class="material-icons">person</i> Logout 
+									(
+									<?php echo Yii::$app->user->identity->username.$text;?>
+									)
+								</p>
+								<p class='hidden-xs hidden-sm' style="float: left;">
+									<i class="material-icons" style="display: block;float: left;">
+										person
+									</i>
+									Logout (<?=Yii::$app->user->identity->username.$text;?>)
+								</p>
+							</a>
 
 
-								</li>
+						</li>
 
-							</ul>
-						<?php } ?>
-					</div>
-				</div>
-			</nav>
+					</ul>
+				<?php endif;?>
+
+			</div>
+		</div>
+	</nav>
 
 
-		</header>
+</header>
 
-		<!-- <br><br>
-		<br><br> -->
 <?php
 $logout=Url::to(['/site/logout']);
 $script=<<<Javascripte
 function postLogout() {
-		$.post('$logout', {}, function(resp) {
+	$.post('$logout', {}, function(resp) {
 			//Do something with the AJAX response
-		});
 	}
+	);
+}
 Javascripte;
 $this->registerJs($script,View::POS_HEAD)
- ?>
+?>

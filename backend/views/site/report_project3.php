@@ -45,7 +45,7 @@ ini_set('max_execution_time', 99999);
 				echo '<div class="a4">';
 				?>
 				
-				<div class="text-center" style="font-size:16px">
+				<div class="text-center" style="font-size:15px">
 					<b>
 						รายฃื่อผู้ที่ไม่เข้าร่วมโครงการ<br><?= $model->acoy->ac->ac_name;?>
 					</b>

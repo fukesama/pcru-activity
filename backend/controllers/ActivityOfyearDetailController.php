@@ -325,10 +325,10 @@ class ActivityOfyearDetailController extends Controller
     	$arr=[];
     	while ($start<=$end) {
     		$str='';
-    		$str=$text.' '.$start.' '.$date;
+    		$str=$text.' '.$start.' '.strtotime($date);
     		$filename=$date.' '.$start;
     		$arr[]=$filename;
-    		$str=Yii::$app->Func->encode($str);
+    		// $str=Yii::$app->Func->encode($str);
     		$this->qrCodeGen($str,$filename);
     		$start++;
     	}

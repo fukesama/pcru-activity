@@ -156,12 +156,16 @@ class SiteController extends Controller
 		else{
 			return $this->redirect(['login']);
 		}
-		$query=ActivityEnter::find()->where(['co_id'=>Yii::$app->User->identity->id]);
+		$query=ActivityEnter::find()
+		->innerJoinWith('acoyd as acoyd')
+		->innerJoinWith('acoyd.acoy as acoy')
+		->innerJoinWith('acoyd.acoy.ac as ac')
+		->where(['co_id'=>Yii::$app->User->identity->id]);
 		$searchModel = new ActivityEnterSearch();
 		$dataProvider = $searchModel->search(Yii::$app->request->queryParams,$query);
 
 		return $this->render('index', [
-			// 'searchModel' => $searchModel,
+			 'searchModel' => $searchModel,
 			'dataProvider' => $dataProvider,
 		]);
 

@@ -91,7 +91,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(UserCollegian::className(), ['user_id' => 'id']);
     }
-        public function getCollegian()
+        public function getCo()
     {
        return $this->hasOne(UserCollegian::className(), ['user_id' => 'id']);
     }

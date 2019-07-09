@@ -43,7 +43,7 @@ use yii\helpers\ArrayHelper;
 			</div>
 		</div>
 		<div class="form-group">
-			<?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+			<?= Html::submitButton('บันทึก', ['class' => 'btn btn-success']) ?>
 
 		</div>
 

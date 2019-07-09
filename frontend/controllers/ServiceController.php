@@ -104,10 +104,10 @@ class ServiceController extends Controller
 		$var['text']='สแกนไม่สำเร็จ';
 		if(Yii::$app->request->post()){
 			$qrcode=$_POST['qrcode'];
-			$qrcode=Yii::$app->Func->decode($_POST['qrcode']);
+			// $qrcode=Yii::$app->Func->decode($_POST['qrcode']);
 
 			$arr=explode(" ",$qrcode);	
-
+			$arr[2]=date('Y-m-d',$arr[2]);
 			$AcEn=Yii::$app->db->createCommand("SELECT COUNT(*)as count FROM Activity_Enter where acoyd_id='".$arr[0]."' and co_id='".$_POST['id']."'");
 			
 			$countAcEn=$AcEn->queryAll();

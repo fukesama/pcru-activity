@@ -56,6 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				<?php 				
 				?>
 				<div class="container-fluid">
+					<?= $this->render('_project',['model'=>$searchModel]) ?>
 					<div class="table-responsive" style='margin-bottom:10px'>
 						<?php $model=backend\models\ActivityEnter::find()->where(['co_id'=>Yii::$app->user->id])->all() ?>
 						<?php 

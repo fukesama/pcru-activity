@@ -72,10 +72,12 @@ class ActivityEnterSearch extends ActivityEnter
     		'co.branch_id' => $this->branch_id,
     		'acoyd_id' => $this->acoyd_id,
     		'co_id' => $this->co_id,
+    		'ac.ac_id'=>$this->ac_id
     	]);
 
     	$query->andFilterWhere(['like', 'enter_status', $this->enter_status])
-    	->andFilterWhere(['like', 'result', $this->result]);
+    	->andFilterWhere(['like', 'result', $this->result])
+    	->andFilterWhere(['like', 'acoyd.ac_startdate', $this->year]);
 
     	return $dataProvider;
     }

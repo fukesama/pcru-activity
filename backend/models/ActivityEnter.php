@@ -19,6 +19,8 @@ use Yii;
  */
 class ActivityEnter extends \yii\db\ActiveRecord
 {
+	public $ac_id;
+	public $year;
     /**
      * {@inheritdoc}
      */

@@ -63,7 +63,7 @@ class ActivityOfyearDetailSearch extends ActivityOfyearDetail
         // grid filtering conditions
     	$query->andFilterWhere([
     		'acoyd_id' => $this->acoyd_id,
-    		'acoy.ac.ac_id' => $this->ac_id,
+    		'ac.ac_id' => $this->ac_id,
             // 'ac_startdate' => $this->ac_startdate,
             // 'ac_enddate' => $this->ac_enddate,
     	]);

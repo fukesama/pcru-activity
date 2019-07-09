@@ -48,7 +48,7 @@ ini_set('max_execution_time', 99999);
 		?>
 
 		<div class="a4">
-			<div class="text-center" style="font-size:16px"><b><?= $model->acoy->ac->ac_name;?></b></div>
+			<div class="text-center" style="font-size:15px"><b>รายฃื่อผู้ที่เข้าร่วม<br><?= $model->acoy->ac->ac_name;?></b></div>
 			<div class="text-center">
 				<b>จัดวันที่</b> <?=  $date?> <b>สถานที่จัด</b> <?= $model->address_detail ?>
 			</div>
