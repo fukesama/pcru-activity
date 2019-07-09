@@ -79,11 +79,8 @@ class ServiceController extends Controller
 		];
 	}
 	public function init()
-
 	{
-
 		$this->layout = false;
-
 	}
 	/**
 	* {@inheritdoc}
@@ -105,9 +102,9 @@ class ServiceController extends Controller
 		if(Yii::$app->request->post()){
 			$qrcode=$_POST['qrcode'];
 			// $qrcode=Yii::$app->Func->decode($_POST['qrcode']);
-
+			$qrcode=Yii::$app->Func->QRDecode($qrcode);
 			$arr=explode(" ",$qrcode);	
-			$arr[2]=date('Y-m-d',$arr[2]);
+			// $arr[2]=date('Y-m-d',$arr[2]);
 			$AcEn=Yii::$app->db->createCommand("SELECT COUNT(*)as count FROM Activity_Enter where acoyd_id='".$arr[0]."' and co_id='".$_POST['id']."'");
 			
 			$countAcEn=$AcEn->queryAll();
@@ -173,20 +170,9 @@ class ServiceController extends Controller
 						$var['text']='คุณสแกนคิวอาร์โค้ดกิจกรรมของวันที่ '.$arr[2].' ซึ่งไม่ตรงกับวันที่กิจกรรมวันนี้วันที่ '.Yii::$app->Func->DateThai((date('Y')+543).date('-m-d'));
 						return json_encode($var);
 					}
-
-
 				}
-
 			}	
-
-
-			// if($countAcEn>0){	
-			
-
 		}
-		
-
-
 	}
 
 	public function actionQrcode(){

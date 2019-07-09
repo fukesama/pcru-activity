@@ -136,16 +136,13 @@ class ActivityOfyearDetailController extends Controller
     			$res= explode(":", $data['acoy_id']);
     			$res=ActivityOfyearDetail::find()->select('qr_num,ac_startdate,ac_enddate')->where(['acoyd_id'=>$res])->one();
     		}
-    		
-
-
     		\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
     		return [
     			'data' => $res,
     		];
     	}
     }
-
+  
     public function actionPreQrcode()
     {
 
@@ -191,30 +188,6 @@ class ActivityOfyearDetailController extends Controller
     		]);
     	}
     }
-
-    
-
-    protected function deleteAll($str) {
-    //It it's a file.
-    	if (is_file($str)) {
-        //Attempt to delete it.
-    		return unlink($str);
-    	}
-    //If it's a directory.
-    	elseif (is_dir($str)) {
-        //Get a list of the files in this directory.
-    		$scan = glob($str.'activity-of-year/{,.}*', GLOB_BRACE);
-        //Loop through the list of files.
-    		foreach($scan as $index=>$path) {
-            //Call our recursive function.
-    			$this->deleteAll($path);
-    		}
-        //Remove the directory itself.
-            // return @rmdir($str);
-    	}
-
-
-    }
     public function print($model,$start,$end,$ac_name,$date1,$date2){
         //$this->Qrcode($id);
     	
@@ -247,6 +220,10 @@ class ActivityOfyearDetailController extends Controller
 
     		'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
     		'cssInline' => '
+    		.a4{
+    			height:29.7cm;
+    			max-height:29.7cm;
+    		}
     		.divtable{
     			border-collapse:collapse;
     			table-layout:fixed;
@@ -311,6 +288,7 @@ class ActivityOfyearDetailController extends Controller
     			'SetFooter'=>['{PAGENO}'],
     		]
     	]);
+
     	$pdf=$pdf->render();
 
 
@@ -326,17 +304,18 @@ class ActivityOfyearDetailController extends Controller
     	$arr=[];
     	while ($start<=$end) {
     		$str='';
-    		$str=$text.' '.$start.' '.strtotime($date);
-    		// $filename=$date.' '.$start;
+    		$str=$text.' '.$start.' '.$date;    		
+    		$str=Yii::$app->Func->QREncode($str);
     		$filename=$str;
+    		// $filename=$date.' '.$start;
     		$arr[]=$filename;
-    		// $str=Yii::$app->Func->encode($str);
+    		
     		$this->qrCodeGen($str,$filename);
     		$start++;
     	}
     	return $arr;
     }
-   
+
 
 
     /**

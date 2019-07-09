@@ -154,9 +154,9 @@ class Func extends Component {
 
 		// you may change these values to your own
 
-		$secret_key = 'FukeDeveloper@PCRUAc_key1';
+		$secret_key = '@PCRUAc_key1';
 
-		$secret_iv = 'FukeDeveloper@PCRUAc_iv1';
+		$secret_iv = '@PCRUAc_iv1';
 
 		$output = false;
 		$encrypt_method = "AES-256-CBC";
@@ -193,8 +193,74 @@ class Func extends Component {
 
 		return substr($encode, 1);
 
-	}
+	}	
+	protected function ForEn($data){
+		$count=strlen($data);
+		
+		$text='';	
+		for($i=0;$i<$count;$i++){
+			switch ($data[$i]) {
+				case '0':$text.='A';break;
+				case '1':$text.='F';break;
+				case '2':$text.='K';break;
+				case '3':$text.='O';break;
+				case '4':$text.='S';break;
+				case '5':$text.='W';break;
+				case '6':$text.='B';break;
+				case '7':$text.='G';break;
+				case '8':$text.='L';break;
+				case '9':$text.='P';break;		
+			}		
+			// $text.=$data[$i];	
+			
+		}
+		return $text;
+		
 
+	}
+	protected function ForDe($data){
+		$count=strlen($data);
+		
+		$text='';	
+		for($i=0;$i<$count;$i++){
+			switch ($data[$i]) {
+				case 'A':$text.='0';break;
+				case 'F':$text.='1';break;
+				case 'K':$text.='2';break;
+				case 'O':$text.='3';break;
+				case 'S':$text.='4';break;
+				case 'W':$text.='5';break;
+				case 'B':$text.='6';break;
+				case 'G':$text.='7';break;
+				case 'L':$text.='8';break;
+				case 'P':$text.='9';break;		
+			}		
+			// $text.=$data[$i];	
+			
+		}
+		return $text;
+		
+
+	}
+	public function QREncode($data) { 
+		$data=explode(' ',$data);
+		$data[0]=dechex($data[0]);
+		$data[1]=$this->ForEn($data[1]);
+		
+		// $data[1]=dechex($data[1]);
+		$data[2]=strtotime($data[2]);
+		$data=$data[0].' '.$data[1].' '.$data[2];
+		return $data; 
+	} 
+
+	public function QRDecode($data) {
+		$data=explode(' ',$data);
+		$data[0]=hexdec($data[0]);
+		$data[1]=hexdec($data[1]);
+		$data[2]=date('Y-m-d',$data[2]);
+		$data=$data[0].' '.$data[1].' '.$data[2]; 
+		return $data; 
+	}
 	public function EnterStatus($data){
 		$array=[
 			'1'=>'ยังไม่ได้เข้าร่วม',
@@ -340,7 +406,7 @@ class Func extends Component {
 		if($month<10){
 			$month = substr($month,1,1);
 		}
-	
+
 		// $year +=543;
 
 		return $day."/".$thMonth[$month-1]."/".$year[2].$year[3];  
