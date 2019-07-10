@@ -19,12 +19,12 @@ ini_set('max_execution_time', 99999);
 	// 	$arr[$value->faculty_name]=$value->faculty_name;
 	// }
 	// $facArr=$arr;
-	$braArr=Branch::find()->all();
-	$arr=[];
-	foreach ($braArr as $key=> $value) {
-		$arr[$value->branch_name]=$value->branch_name;
-	}
-	$braArr=$arr;
+	// $braArr=Branch::find()->all();
+	// $arr=[];
+	// foreach ($braArr as $key=> $value) {
+	// 	$arr[$value->branch_name]=$value->branch_name;
+	// }
+	// $braArr=$arr;
 	$preArr=Prefix::find()->all();
 	$arr=[];
 	foreach ($preArr as $key=> $value) {

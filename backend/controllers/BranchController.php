@@ -22,26 +22,26 @@ class BranchController extends Controller
      */
     public function behaviors()
     {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'ruleConfig' => [
+    	return [
+    		'access' => [
+    			'class' => AccessControl::className(),
+    			'ruleConfig' => [
                     'class' => AccessRule::className(), // เรียกใช้งาน accessRule (component) ที่เราสร้างขึ้นใหม่
                 ],
                 'rules' => [
-                    [
-                        'actions' => ['index','view','create','update','delete'],
-                        'allow' => true,
-                        'roles' => [User::ADMIN],
-                    ],
+                	[
+                		'actions' => ['index','view','create','update','delete'],
+                		'allow' => true,
+                		'roles' => [User::ADMIN],
+                	],
 
                 ],
             ],
             'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
+            	'class' => VerbFilter::className(),
+            	'actions' => [
+            		'logout' => ['post'],
+            	],
             ],
         ];
     }
@@ -52,13 +52,27 @@ class BranchController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new BrachSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+    	$searchModel = new BrachSearch();
+    	$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+    	return $this->render('index', [
+    		'searchModel' => $searchModel,
+    		'dataProvider' => $dataProvider,
+    	]);
+    }
+    public function beforeAction($action){
+    	if (!Yii::$app->user->isGuest) {
+    		if (Yii::$app->User->identity->level_user == '2') {
+    			return $this->redirect(['../pcru-activity/site']);
+    		}
+    		elseif(Yii::$app->User->identity->level_user == '1'){
+    			return $this->redirect(['/site']);
+    		}
+    	}
+    	else{
+    		return $this->redirect(['../site']);
+    	}
+    	return parent::beforeAction($action);
     }
 
     /**
@@ -69,9 +83,9 @@ class BranchController extends Controller
      */
     public function actionView($id)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+    	return $this->render('view', [
+    		'model' => $this->findModel($id),
+    	]);
     }
 
     /**
@@ -81,15 +95,15 @@ class BranchController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Branch();
+    	$model = new Branch();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->branch_id]);
-        }
+    	if ($model->load(Yii::$app->request->post()) && $model->save()) {
+    		return $this->redirect(['view', 'id' => $model->branch_id]);
+    	}
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+    	return $this->render('create', [
+    		'model' => $model,
+    	]);
     }
 
     /**
@@ -101,15 +115,15 @@ class BranchController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+    	$model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->branch_id]);
-        }
+    	if ($model->load(Yii::$app->request->post()) && $model->save()) {
+    		return $this->redirect(['view', 'id' => $model->branch_id]);
+    	}
 
-        return $this->render('update', [
-            'model' => $model,
-        ]);
+    	return $this->render('update', [
+    		'model' => $model,
+    	]);
     }
 
     /**
@@ -121,9 +135,9 @@ class BranchController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+    	$this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+    	return $this->redirect(['index']);
     }
 
     /**
@@ -135,10 +149,10 @@ class BranchController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Branch::findOne($id)) !== null) {
-            return $model;
-        }
+    	if (($model = Branch::findOne($id)) !== null) {
+    		return $model;
+    	}
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+    	throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

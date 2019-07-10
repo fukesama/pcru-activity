@@ -74,7 +74,7 @@ class UserController extends Controller
     public function beforeAction($action){
     	if (!Yii::$app->user->isGuest) {
     		if (Yii::$app->User->identity->level_user == '2' ||Yii::$app->User->identity->level_user == '1') {
-    			return $this->redirect(['../pcru-activity/site']);
+    			return $this->redirect(['../site']);
     		}
     	}
     	return parent::beforeAction($action);

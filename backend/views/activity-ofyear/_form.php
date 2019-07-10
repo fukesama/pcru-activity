@@ -30,6 +30,7 @@ use yii\helpers\ArrayHelper;
 						'pluginOptions' => [
 							'allowClear' => true,
 							
+							'multiple'=>true
 						],
 					]);
 					echo '</div>';
@@ -42,7 +43,7 @@ use yii\helpers\ArrayHelper;
 							'placeholder' => 'เลือกกิจกรรม',						
 						],
 						'pluginOptions' => [
-							'allowClear' => true								
+							'allowClear' => true							
 						],
 					]);
 				}

@@ -82,6 +82,9 @@ class ActivitySideController extends Controller
     			return $this->redirect(['/site']);
     		}
     	}
+    	else{
+    		return $this->redirect(['../site']);
+    	}
     	return parent::beforeAction($action);
     }
     /**

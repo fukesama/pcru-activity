@@ -54,10 +54,10 @@ class ActivityOfyearController extends Controller
     		if (Yii::$app->User->identity->level_user == '2') {
     			return $this->redirect(['/site']);
     		}
-    	
+    		
     	}
     	else{
-    			return $this->redirect(['../site']);
+    		return $this->redirect(['../site']);
     	}
     	return parent::beforeAction($action);
     }

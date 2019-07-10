@@ -71,7 +71,7 @@ class SiteController extends Controller
 				return $this->redirect(['../pcru-activity/site']);
 			}
 		}else{
-			return $this->redirect(['../pcru-activity/site/login']);
+			return $this->redirect(['../site']);
 		}
 		return parent::beforeAction($action);
 	}
@@ -304,7 +304,12 @@ class SiteController extends Controller
 	
 	public function actionReportProject($acoyd_id)
 	{
-		$acen=ActivityEnter::find()->where(['acoyd_id'=>$acoyd_id])->all();
+		$count=ActivityEnter::find()->where(['acoyd_id'=>$acoyd_id])->count();
+		if($count==0){
+			Yii::$app->session->setFlash('warning','ไม่มีข้อมูล');
+			return $this->redirect(['project']);
+		}
+
 		// $count=0;
 		// foreach ($acen as $value) {
 		// 	$count+=ActivityEnterDetail::find()->where(['acen_id'=>$value->acen_id])->count();
@@ -315,7 +320,7 @@ class SiteController extends Controller
 
 		// if($acoyd_id==''||$acoyd_id==null||!isset($acoyd_id)||$count==0){
 		// 	Yii::$app->session->setFlash('warning','ไม่มีข้อมูล');
-		// 	return $this->goBack();
+		// 	return $this->redirect(['project']);
 		// }
 		$model=ActivityOfyearDetail::find()->where(['acoyd_id'=>$acoyd_id])->one();	
 		ini_set("pcre.backtrack_limit", "50000000");
@@ -337,7 +342,7 @@ class SiteController extends Controller
 
 		if($acoyd_id==''||$acoyd_id==null||!isset($acoyd_id)||$count==0){
 			Yii::$app->session->setFlash('warning','ไม่มีข้อมูล');
-			return $this->goBack();
+			return $this->redirect(['project']);
 		}
 		$model=ActivityOfyearDetail::find()->where(['acoyd_id'=>$acoyd_id])->one();	
 		

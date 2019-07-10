@@ -256,7 +256,8 @@ class Func extends Component {
 	public function QRDecode($data) {
 		$data=explode(' ',$data);
 		$data[0]=hexdec($data[0]);
-		$data[1]=hexdec($data[1]);
+		$data[1]=$this->ForDe($data[1]);
+		// $data[1]=hexdec($data[1]);
 		$data[2]=date('Y-m-d',$data[2]);
 		$data=$data[0].' '.$data[1].' '.$data[2]; 
 		return $data; 
