@@ -42,26 +42,26 @@ class SiteController extends Controller
 	public function behaviors()
 	{
 		return [
-			'access' => [
-				'class' => AccessControl::className(),
-				'only' => ['logout','index'],
-				'ruleConfig' => [
-					'class' => AccessRule::className(), // เรียกใช้งาน accessRule (component) ที่เราสร้างขึ้นใหม่
-				],
-				'rules' => [
-					[         
-						'actions' =>['index'],               
-						'allow' => true,
-						'roles' => [User::COLLEGIAN],
-					],
-					[
-						'actions' =>['logout'],
-						'allow' => true,
-						'roles' => ['@'],
-					],
+			// 'access' => [
+			// 	'class' => AccessControl::className(),
+			// 	'only' => ['logout','index'],
+			// 	'ruleConfig' => [
+			// 		'class' => AccessRule::className(), // เรียกใช้งาน accessRule (component) ที่เราสร้างขึ้นใหม่
+			// 	],
+			// 	'rules' => [
+			// 		[         
+			// 			'actions' =>['index'],               
+			// 			'allow' => true,
+			// 			'roles' => [User::COLLEGIAN],
+			// 		],
+			// 		[
+			// 			'actions' =>['logout'],
+			// 			'allow' => true,
+			// 			'roles' => ['@'],
+			// 		],
 					
-				],
-			],
+			// 	],
+			// ],
 			'verbs' => [
 				'class' => VerbFilter::className(),
 				'actions' => [

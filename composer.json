@@ -13,6 +13,12 @@
 		"source": "https://github.com/yiisoft/yii2"
 	},
 	"minimum-stability": "stable",
+	"autoload": {
+        "psr-4": {
+            "ramosisw\\CImaterial\\": "./custome_lib/yii2-material-dashboard/web/"
+        }
+    },
+	
 	"require": {
 		"php": ">=5.4.0",
 		"yiisoft/yii2": "~2.0.6",
@@ -58,7 +64,6 @@
 		"phpmailer/phpmailer": "^6.0",
 		"rmrevin/yii2-fontawesome": "*",
 		"mickgeek/yii2-daslider": "^1.0",
-		"ramosisw/yii2-material-dashboard": "dev-master",
 		"listfixer/yii2-remember-me": "^1.0",
 		"mervick/yii2-material-design-icons": "~1.0",
 		"pavlinter/yii2-sticky-footer": "^1.0",

@@ -9,6 +9,9 @@ return [
 	],
 	'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
 	'components' => [
+		'Func' => [
+			'class' => 'common\components\Func',
+		],
 		'cache' => [
 			'class' => 'yii\caching\FileCache',
 		],

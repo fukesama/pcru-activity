@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'yii\\image\\' => array($vendorDir . '/yurkinx/yii2-image'),
     'cebe\\gravatar\\' => array($vendorDir . '/cebe/yii2-gravatar'),
     'amnah\\yii2\\' => array($vendorDir . '/amnah/yii2-classes'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),

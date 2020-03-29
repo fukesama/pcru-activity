@@ -93,11 +93,7 @@ if (Yii::$app->user->isGuest) {
 						$menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
 						$menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 					else :
-
-
 						?>
-
-
 						<li>
 							<a href="#" style="font-weight: bold;" onclick="postLogout()">
 

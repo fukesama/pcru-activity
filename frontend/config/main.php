@@ -43,7 +43,7 @@ return [
 		],
 		'urlManager' => [
 			'showScriptName' => false,   
-			'enablePrettyUrl' => true,   
+			'enablePrettyUrl' => false,   
 			'enableStrictParsing' => false,
 			'rules' => array(
 				'' => 'site/index',
@@ -54,14 +54,14 @@ return [
 		],
 		'urlManagerBackend' => [
 			'class' => 'yii\web\urlManager',
-			'baseUrl' => '/pcru-activity/backend',
-			'enablePrettyUrl' => true,
+			// 'baseUrl' => '/pcru-activity/backend',
+			'enablePrettyUrl' => false,
 			'showScriptName' => false
 		],
 		'urlManagerFrontend' => [
 			'class' => 'yii\web\urlManager',
-			'baseUrl' => '/pcru-activity/',
-			'enablePrettyUrl' => true,
+			// 'baseUrl' => '/pcru-activity/',
+			'enablePrettyUrl' => false,
 			'showScriptName' => false,
 		],
 		'errorHandler' => [

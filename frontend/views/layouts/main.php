@@ -4,8 +4,6 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 //use yii2mod\alert\Alert;
@@ -13,16 +11,14 @@ use frontend\assets\AppAsset;
 use yii\helpers\Url;
 use common\components\Mobiledetect as MD;
 use yii\web\View;
-use yii\helpers\Json;
-use bluezed\scrollTop;
-
+use bluezed\scrollTop;;
 //use aryelds\sweetalert\SweetAlert;
 
 \Yii::$app->language = 'th-TH';
 AppAsset::register($this);
-
-if (class_exists('ramosisw\CImaterial\web\MaterialAsset23')) {
-	ramosisw\CImaterial\web\MaterialAsset23::register($this);
+var_dump(class_exists('ramosisw\CImaterial\web\MaterialAsset'));
+if (class_exists('ramosisw\CImaterial\web\MaterialAsset')) {
+	ramosisw\CImateria\web\MaterialAsset::register($this);
 	yii\materialicons\AssetBundle::register($this);
 	rmrevin\yii\fontawesome\AssetBundle::register($this);
 }

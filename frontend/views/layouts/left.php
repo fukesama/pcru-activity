@@ -7,7 +7,7 @@ use frontend\models\User;
 
 use yii\web\View;
 use yii\helpers\Json;
-use ramosisw\CImaterial\widgets\Menu;
+
 if (!Yii::$app->user->isGuest) :
 	echo $this->render('not_isguest_menu.php') ;
 

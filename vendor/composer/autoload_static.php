@@ -113,14 +113,9 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
             'phpDocumentor\\Reflection\\' => 25,
             'pavlinter\\' => 10,
         ),
-        'o' => 
-        array (
-            'odaialali\\qrcodereader\\' => 23,
-        ),
         'm' => 
         array (
             'moonland\\phpexcel\\' => 18,
-            'miloschuman\\highcharts\\' => 23,
             'mihaildev\\ckeditor\\' => 19,
             'mickgeek\\daslider\\' => 18,
             'mdm\\admin\\' => 10,
@@ -138,9 +133,7 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
             'kartik\\switchinput\\' => 19,
             'kartik\\spinner\\' => 15,
             'kartik\\sortable\\' => 16,
-            'kartik\\slider\\' => 14,
             'kartik\\sidenav\\' => 15,
-            'kartik\\select2\\' => 15,
             'kartik\\rating\\' => 14,
             'kartik\\range\\' => 13,
             'kartik\\popover\\' => 15,
@@ -190,10 +183,6 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
         array (
             'bluezed\\scrollTop\\' => 18,
             'bizley\\quill\\' => 13,
-        ),
-        'a' => 
-        array (
-            'aryelds\\sweetalert\\' => 19,
         ),
         'W' => 
         array (
@@ -327,7 +316,8 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
         ),
         'ramosisw\\CImaterial\\' => 
         array (
-            0 => __DIR__ . '/..' . '/ramosisw/yii2-material-dashboard',
+            0 => __DIR__ . '/../..' . '/custome_lib/yii2-material-dashboard/web',
+            1 => __DIR__ . '/..' . '/ramosisw/yii2-material-dashboard',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
@@ -339,17 +329,9 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
         array (
             0 => __DIR__ . '/..' . '/pavlinter/yii2-sticky-footer',
         ),
-        'odaialali\\qrcodereader\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/odaialali/yii2-qrcode-reader',
-        ),
         'moonland\\phpexcel\\' => 
         array (
             0 => __DIR__ . '/..' . '/moonlandsoft/yii2-phpexcel',
-        ),
-        'miloschuman\\highcharts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/miloschuman/yii2-highcharts-widget/src',
         ),
         'mihaildev\\ckeditor\\' => 
         array (
@@ -395,17 +377,9 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-sortable/src',
         ),
-        'kartik\\slider\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-slider/src',
-        ),
         'kartik\\sidenav\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-sidenav',
-        ),
-        'kartik\\select2\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-select2/src',
         ),
         'kartik\\rating\\' => 
         array (
@@ -567,10 +541,6 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
         array (
             0 => __DIR__ . '/..' . '/bizley/quill',
         ),
-        'aryelds\\sweetalert\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/aryelds/yii2-sweet-alert',
-        ),
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
@@ -703,13 +673,6 @@ class ComposerStaticInitc9786ae2f8a7f22f89d7dfde8d429327
     );
 
     public static $prefixesPsr0 = array (
-        'y' => 
-        array (
-            'yii\\image\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/yurkinx/yii2-image',
-            ),
-        ),
         'c' => 
         array (
             'cebe\\gravatar\\' => 
